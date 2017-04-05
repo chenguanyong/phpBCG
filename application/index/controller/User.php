@@ -7,7 +7,7 @@ use think\Session;
 use think\Request;
 
 
-class User
+class User 
 {
     public function index(){
         $view = new View();
@@ -16,7 +16,6 @@ class User
         
             return $view->fetch('Login/login');
         }
-        
         return $view->fetch('index');
     }
     //通过部门id获取用户
@@ -45,7 +44,7 @@ class User
     }
     
     public function editUser(){
-        
+        $view = new  View();
         //
         $UserID = CheckUser();
         if($UserID == false){
@@ -63,6 +62,19 @@ class User
         return json_encode($query_data,JSON_UNESCAPED_UNICODE);
         
         
+    }
+    //用户中心
+    public function userProfile(){
+        $view = new View();
+        
+        return $view->fetch('profile');
+    }
+    //时间线
+    public function timeline(){
+        
+        $view = new View();
+        
+        return $view->fetch('timeline');
     }
 }
 
