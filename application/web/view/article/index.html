@@ -1,7 +1,7 @@
 
 <title>Form Wizard - Ace Admin</title>
 
-<link rel="stylesheet" href="../../components/select2/dist/css/select2.css" />
+<link rel="stylesheet" href="{$Think.config.__PUBLIC__}/static/components/select2/dist/css/select2.css" />
 
 <!-- ajax layout which only needs content area -->
 <div class="page-header">
@@ -546,7 +546,7 @@
 
 <!-- page specific plugin scripts -->
 <script type="text/javascript">
-	var scripts = [null,"../../components/fuelux/js/wizard.js","../../components/jquery-validation/dist/jquery.validate.js","../../components/jquery-validation/dist/additional-methods.js","../../components/bootbox.js/bootbox.js","../../components/jquery.maskedinput/dist/jquery.maskedinput.js","../../components/select2/dist/js/select2.js", null]
+	var scripts = [null,"{$Think.config.__PUBLIC__}/static/components/fuelux/js/wizard.js","{$Think.config.__PUBLIC__}/static/components/jquery-validation/dist/jquery.validate.js","{$Think.config.__PUBLIC__}/static/components/jquery-validation/dist/additional-methods.js","{$Think.config.__PUBLIC__}/static/components/bootbox.js/bootbox.js","{$Think.config.__PUBLIC__}/static/components/jquery.maskedinput/dist/jquery.maskedinput.js","{$Think.config.__PUBLIC__}/static/components/select2/dist/js/select2.js", null]
 	$('.page-content-area').ace_ajax('loadScripts', scripts, function() {
 	  //inline scripts related to this page
 		 jQuery(function($) {

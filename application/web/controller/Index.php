@@ -10,7 +10,7 @@ class Index extends Controller
     {  
 
 
-        return $this->fetch('index'); //$password;
+        return $this->fetch('design'); //$password;
     }
 
 }

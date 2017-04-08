@@ -5,6 +5,7 @@ use think\Db;
 class User_mode extends Model
 {
     protected $table = 'ce_user';
+    protected $pk = 'ID';
     public function initialize(){
     
         parent::initialize();
@@ -28,17 +29,38 @@ class User_mode extends Model
 
     
     //添加用户
-    public function addUser($userdata){
+    public function addUser($userdata,$userInfo =array()){
     
         if(!is_array($userdata)){
             return false;
         }
-        $this->UserName = $userdata['UserName'];
-        $this->PassWord = $userdata['PassWord'];
-        $this->save();
+        $result = $this->where(["UserName"=>$userdata["UserName"]])->find();
+        if($result == null){
+            
+            return array("code"=>0,"msg"=>"用户名已存在！");
+        }
+        $this->save($userdata);
         $int_userid = $this->ID;
-        // $this->UserID = $int_userid;
         $this->save(['UserID'=>$int_userid],['ID'=>$int_userid]);
+        if(count($userInfo) > 0){
+            $userInfo['UserID'] = $int_userid;
+            $result = $this->addUserInfo($userInfo);
+            if($result){
+                return array("code"=>1,"msg"=>"添加成功!");}
+            else {
+                return array("code"=>1,"msg"=>"添加成功!");
+            }
+        }
+        return array("code"=>1,"msg"=>"添加成功!");
+    }
+    //添加用户详细信息
+    public function addUserInfo($data){
+       $result = Db::name("userinfo")->insert($data);
+       if($result == 0){
+           return false;
+       }else{
+           return true;
+       }        
     }
     
     //查询用户
@@ -48,20 +70,50 @@ class User_mode extends Model
         return $user;
     
     }
+//     //更新用户
+    public function updateUser($data,$id){
+        $result = $this->get(["UserName"=>$data["UserName"]]);
+        if($result == null){
+            
+            return array("code"=>0,"msg"=>"用户名已存在!");
+        }
+        $result = $this->save($data,['id'=>$id]);
+        if($result ){
+            return array("code"=>1,"msg"=>"更新成功!");
+        }else{
+            return array("code"=>0,"msg"=>"更新失败!");
+        }
+    }
+//     //删除用户
+    public function dele($id){
+        $result = $this->save(["IsDelete"=>1],['UserID'=>$id]);
+        if($result){
+            
+            $result = Db::name("userinfo")->where('UserID', $id)->update(['IsDelete'=>1]);
+            if($result ){
+                return array("code"=>1,"msg"=>"删除成功!");
+            }else{
+                return array("code"=>0,"msg"=>"删除失败!");
+            }
+        }else{
+            
+            return array("code"=>0,"msg"=>"删除失败!");
+        }
+    }
     
-    //返回密码
+//     //返回密码
     public function getuserpassword($username){
     
         $user = self::selectuser($username);
     
         return $user->getAttr('PassWord');
     }
-    //返回所有信息
+//     //返回所有信息
     public function getAllUserData($username){
     
         return self::selectuser($username);
     }
-    //获取指定部门id的用户列表
+//     //获取指定部门id的用户列表
     public function getUserByDeparID($DeparID, $start, $length){
         
         $sql = 'SELECT ';
@@ -70,7 +122,9 @@ class User_mode extends Model
         $sql = $sql . 'users.moblie moblie, ';
         $sql = $sql . 'depart.ShortName CompanyName, ';
         $sql = $sql . 'depart.OrganizationName DeparName, ';
-        $sql = $sql . 'users.Names AS Name ';
+        $sql = $sql . 'users.Names AS Name ,';
+        $sql = $sql . 'users.id AS ID ,';
+        $sql = $sql . 'users.UserID AS UserID ';
         $sql = $sql . 'FROM ';
         $sql = $sql . 'ce_department AS depart, ';
         $sql = $sql . 'ce_user AS users ';

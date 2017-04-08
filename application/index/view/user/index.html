@@ -43,7 +43,7 @@
     <div class="row">
       <div class="col-xs-5">
         <div class="clearfix">
-          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="修改用户">修改</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='1' data-whatever="新增用户">添加</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='2' data-whatever="删除用户">删除</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="查看用户信息">查看</button>
+          <button class="btn btn-sm btn-primary" data-type='3' data-toggle="modal" data-target="#myModal" data-whatever="修改用户">修改</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='1' data-whatever="新增用户">添加</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='2' data-whatever="删除用户">删除</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="查看用户信息">查看</button>
         </div>
       </div>
 
@@ -69,7 +69,7 @@
             <th class="hidden-480">start_date</th>
 
             <th class="hidden-480">salary</th>
-
+<th class="hidden-480">salaryL</th>
             <th></th>
           </tr>
         </thead>
@@ -239,7 +239,7 @@
         </div>
 
         <div class="modal-footer">
-          <button data-bb-handler="cancel" type="button" data-dismiss="modal" class="btn btn-default">关闭</button> <button data-bb-handler="confirm" id="sure_button" type="button" class="btn btn-primary">确定</button>
+          <button data-bb-handler="cancel" type="button" data-dismiss="modal" class="btn btn-default">关闭</button> <button data-bb-handler="confirm" id="sure_button" type="button" data-id="0" data-type="0" class="btn btn-primary">确定</button>
         </div>
       </div>
     </div>
@@ -267,7 +267,7 @@
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" id='depart' data-tree='' data-value='' class="btn btn-primary">确定</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" id='depart'   data-tree='' data-value='' class="btn btn-primary">确定</button>
       </div>
     </div>
   </div>
@@ -306,10 +306,13 @@ $(function ()
         var confirmNewPassword = $('#confirmNewPassword').val(); //重复密码
         var email = $('#email').val(); //邮箱
         var mobile = $('#mobile').val();
+        var phone = $('#phone').val();
         var loginFlag = $('#loginFlag').val(); //是否允许登录
         var userType = $('#userType').val(); //用户类型
         var userRole = $('[name=roleIdList]').children('[checked=true]').attr('value'); //用户角色
         var remarks = $('#remarks').val(); //备注
+        var id = $("#sure_button").attr("data-id");
+        var type = $("#sure_button").attr("data-type");
         $.post('{$Think.config.__PUBLIC__}/index/User/editUser',
         {
             companyID : companyID,
@@ -323,10 +326,13 @@ $(function ()
             loginFlag : loginFlag,
             userType : userType,
             userRole : userRole,
-            remarks : remarks
+            remarks : remarks,
+            phone : phone,
+            id:id,
+            type:type
         }, function (data)
         {
-            alert(data);
+            alert("dsfsd");
 
         }, 'Json');
     }
@@ -563,6 +569,13 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                         "title" : "归属部门",
                         "orderable" : false,
                     },
+               
+                    {
+                        "data" : "ID",
+                        "title" : "ID",
+                        "orderable" : false,
+                    },
+
                     {
                         "data" : ""
                     }
@@ -576,10 +589,15 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                     },
                     {
                         "orderable" : false,
-                        "targets" : 7,
+                        "targets" : 8,
                         "data" : null,
-                        "defaultContent" : "<a href='#' class='btn btn-info btn-xs'><i class='fa fa-search-plus'></i> 查看</a><a href='#' class='btn btn-success btn-xs'><i class='fa fa-edit'></i> 修改</a><a href='#'  class='btn btn-danger btn-xs'><i class='fa fa-trash'></i> 删除</a>"
-                    }
+                        "defaultContent" : "<a href='javascript' class='btn btn-info btn-xs'><i class='fa fa-search-plus'></i> 查看</a><a href='javascript' class='btn btn-success btn-xs'><i class='fa fa-edit'></i> 修改</a><a href='javascript'  class='btn btn-danger btn-xs'><i class='fa fa-trash'></i> 删除</a>"
+                    },
+                    {
+                        "targets": [ 7 ],
+                        "visible": false,
+                        "searchable": false
+                      },
 
                 ],
 
@@ -765,32 +783,10 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
             modal.find('.modal-title').text(recipient);
             if (type == 1)
             {
+            	$("#sure_button").attr("data-type",'1');
                 return;
             }
-            if (type == 2)
-            {
-                $('#myModal').modal('hide');
-                $("#dialog_delete").dialog(
-                {
-                    modal : true,
-                    dialogClass : "no-close",
-                    buttons : [
-                        {
-                            text : "取消",
-                            click : function ()
-                            {
-                                $(this).dialog("close");
-                            }
-                        },
-                        {
-                            text : "确定",
-                            click : function ()  {}
-                        }
-                    ]
-                }
-                );
-                return false;
-            }
+
 
             var checked_count = $('#dynamic-table tbody').find('[data-checked=1]').toArray().length;
             if (checked_count == 0)
@@ -814,9 +810,50 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                 return false;
             }
             else
+            {	           
+            if (type == 2)
             {
                 var mytables = myTable.rows($('#dynamic-table tbody').find('[data-checked=1]').parent('label').parent('td').parent('tr'))[0][0];
                 var d = myTable.row(mytables).data();
+                $('#myModal').modal('hide');
+                $("#dialog_delete").dialog(
+                {
+                    modal : true,
+                    dialogClass : "no-close",
+                    buttons : [
+                        {
+                            text : "取消",
+                            click : function ()
+                            {
+                                $(this).dialog("close");
+                            }
+                        },
+                        {
+                            text : "确定",
+                            click : function ()  {
+                            	$(this).dialog("close");
+                                $.post('{$Think.config.__PUBLIC__}/index/User/deleUser',
+                                        {
+                                            id:d.UserID
+                                        }, function (data)
+                                        {
+                                            if(data.code == 1){
+                                            	
+                                            	alert(data.msg);
+                                            }else{
+                                            	alert(data.msg);
+                                            }
+
+                                        }, 'Json');
+                            }
+                        }
+                    ]
+                }
+                );
+                return false;
+            }
+            	$("#sure_button").attr("data-type",'3');
+
                 $('#companyName').val(d.CompanyName); //获取归属公司id和值
                 $('#companyName').attr("data-companyID", '1');
                 $('#officeName').val(d.DeparName); //归属办公室
@@ -831,6 +868,7 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                 $('#loginFlag').val(); //是否允许登录
                 $('#userType').val(); //用户类型
                 //$('[name=roleIdList]').childen();//用户角色
+                $("#sure_button").attr("data-id",d.ID);
                 $('#remarks').val('dfadsfadsf'); //备注
             }
         }
@@ -838,7 +876,7 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
 
         $('#dynamic-table tbody').on('click', '.btn.btn-info.btn-xs', function ()
         {
-
+        	$("#sure_button").attr("data-type",'4');
             var mytables = myTable.rows($(this).parent('td').parent('tr'))[0][0];
             var d = myTable.row(mytables).data();
             $('#companyName').val(d.CompanyName); //获取归属公司id和值
@@ -856,15 +894,15 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
             $('#userType').val(); //用户类型
             //$('[name=roleIdList]').childen();//用户角色
             $('#remarks').val('dfadsfadsf'); //备注
-
             $('#myModal').modal('show');
         }
         );
         $('#dynamic-table tbody').on('click', '.btn.btn-success.btn-xs', function ()
         {
-
+        	$("#sure_button").attr("data-type",'3');
             var mytables = myTable.rows($(this).parent('td').parent('tr'))[0][0];
             var d = myTable.row(mytables).data();
+            $("#sure_button").attr("data-id",d.ID);
             $('#companyName').val(d.CompanyName); //获取归属公司id和值
             $('#companyName').attr("data-companyID", '1');
             $('#officeName').val(d.DeparName); //归属办公室
@@ -900,7 +938,24 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                     },
                     {
                         text : "确定",
-                        click : function ()  {}
+                        click : function ()  {
+                        	$(this).dialog("close");
+                            var mytables = myTable.rows($('#dynamic-table tbody').find('[data-checked=1]').parent('label').parent('td').parent('tr'))[0][0];
+                            var d = myTable.row(mytables).data();
+                            $.post('{$Think.config.__PUBLIC__}/index/User/deleUser',
+                                    {
+                                        id:d.UserID
+                                    }, function (data)
+                                    {
+                                        if(data.code == 1){
+                                        	
+                                        	alert(data.msg);
+                                        }else{
+                                        	alert(data.msg);
+                                        }
+
+                                    }, 'Json');
+                        }
                     }
                 ]
             }

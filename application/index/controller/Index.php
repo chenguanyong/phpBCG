@@ -20,6 +20,7 @@ class Index extends Controller
         }
         $username = Session::get("UserName");
         $menudata = Menu::getMenuData(1);
+        
         $buildMenuhtml = new \lib\html\BuildMenuHtml($menudata);
         
         $meunhtml = $buildMenuhtml->buildMenu();        
