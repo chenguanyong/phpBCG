@@ -45,25 +45,17 @@ class Menu extends Model
     	$sql = $sql . 'AND menu_role.RoleID =' . $roleID . ' ';    	
     	$sql = $sql . 'Order by ';
     	$sql = $sql . 'menu.MenuID ASC  ';
-
-        
         $result = Db::query($sql);
-
         if(count($result) == 0){
-        
             return false;
         }
-        
-        
         foreach ($result as $row){
-        
             $arr = array($row['menuID'],$row['ParentID'],'title'=>$row['MenuName'],'url'=>$row['URL'],'flag'=>$row['Flag']);
             $back_data_array['' . $row['ParentID']][] = $arr;
         }
         return $back_data_array;
     }
     //获取彩单
-    
     public function getMenuParentID($ParentID){
         
         //$menu = $this->get(['ParentID'=$ParentID]);
@@ -126,7 +118,7 @@ class Menu extends Model
     //添加菜单
     public function addMenu($Menudata){
         
-       $menu = $this->where('MenuID',$Menudata['MenuID'])-find()->getdata();
+       $menu = $this->where('MenuID',$Menudata['MenuID'])->find()->getdata();
        if($menu == null){
            
            return null;
@@ -138,14 +130,46 @@ class Menu extends Model
     //删除菜单
     public function deleMenu($meunID){
         
-        return $this->save(['ISdele'=>$meunID],['ID'=>$meunID['id']])==false?false:true;
+        return $this->save(['IsDelete'=>1],['ID'=>$meunID])==false?false:true;
         
     }
     
-    public  function updateMenu($menuID){
+    public function updateMenu($menudata,$menuID){
+        $result = $this->where(['MenuName'=>$menudata['MenuName']])->find();
+        if($result == null){
+            return false;
+        }
+        return $this->save($menudata,['ID'=>$menuID])==false?false:true;
+    }
+    /**
+     * [getMenuByID 获取菜单]
+     * @return [type] [description]
+     * @author
+     */
+    public function getMenuByID($roleID,$id,$map,$Nowpage,$limits){
         
-        
-        return $this->save($menudata,['id'=>$menudata['id']])==false?false:true;
+        $result = $this->field('ce_menu.*')->join('ce_menu_role', 'ce_menu.MenuID = ce_menu_role.MenuID')
+            ->where($map)->page($Nowpage, $limits)->order('ID desc')->select();
+        $rownum = $this->join('ce_menu_role', 'ce_menu.MenuID = ce_menu_role.MenuID')
+            ->where($map)->count();
+        if($rownum == 0){
+            return null;
+        }
+        return array("data"=>$result,"count"=>$rownum);
+    } 
+    /**
+     * [getChildMenuByID 获取子菜单]
+     * @return [type] [description]
+     * @author
+     */
+    public function getChildMenuByID($roleID,$id){
+    
+        $result = $this->field('ce_menu.*')->join('ce_menu_role', 'ce_menu.MenuID = ce_menu_role.MenuID')
+        ->where($map)->select();
+        if($result == 0){
+            return null;
+        }
+        return $result;
     }
 }
 

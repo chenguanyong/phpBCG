@@ -4,30 +4,57 @@
 
 
 <title>菜单管理</title>
-<div class="row">
-									<div class="col-xs-12">
-					<table id="simple-table" class="table  table-bordered table-hover">
-											<thead>
-												<tr>
+<div class="row"  >
+  <div class="col-xs-2" style="margin:0px;padding-right:2px;">
+      <div class="widget-box" style="margin:0px;">
+        <div class="widget-header widget-header-flat">
+          <h4 class="widget-title smaller">部门列表</h4>
+        </div>
 
-													<th class="detail-col">Details</th>
-													<th>Domain</th>
-													<th>Price</th>
-					
-												</tr>
-											</thead>
+        <div class="widget-body" style="font-size:10px;  overflow:auto">
+          <div class="widget-main" style="font-size:10px;overflow:auto">
+            <div id="usertreeview" class="tree" style="font-size:8px; width:100%; sScrollX:auto;sScrollY:auto"></div>
+          </div>
+        </div>
+      </div>
+  </div>
+<div class="col-xs-10" >
+	<div class="space-6"></div>										
+	<div class="row">
+	      <div class="col-xs-5">
+        <div class="clearfix">
+          <button class="btn btn-sm btn-primary" data-type='3' data-toggle="modal" data-target="#myModal" data-whatever="修改用户">修改</button>
+          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='1' data-whatever="新增用户">添加</button> 
+          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='2' data-whatever="删除用户">删除</button> 
+          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="查看用户信息">查看</button>
+        </div>
+      </div>
+	</div>									
+	<div class="space-4"></div>								
+	<table id="simple-table" class="table  table-bordered table-hover">
+		<thead>
+			<tr>
+				<th class="detail-col"><label class="pos-rel"><input type="checkbox" class="ace"><span class="lbl"></span></label></th>
+				<th>菜单</th>
+				<th>URL</th>
+				<th>样式</th>
+				<th>状态</th>
+				<th>操作</th>
+			</tr>
+		</thead>
 
-											<tbody id="gh">
-												
-											</tbody>
-										</table>
-									</div><!-- /.span -->
-								</div><!-- /.row -->
+		<tbody id="gh">
+			
+		</tbody>
+	</table>
+	<div class="row"><div class="col-xs-7"></div><div class="col-xs-5"><ul id="page"></ul></div></div>
+</div><!-- /.span -->
+</div><!-- /.row -->
 
 <script type="text/javascript">
 (function ($){
 
-  //构建表格
+  //鏋勫缓琛ㄦ牸
 	  function BuildTr(obj){
 			var tbody = document.getElementById(obj.id);
 			var data = obj.data;
@@ -36,19 +63,32 @@
 				
 				return false;
 			}
+			var defaultcolum = obj.defaultcolumn;
+			var defaultBefCol = obj.defaultBefCol;
 			for(var i=0; i<data.length;i++){
 				var tr = document.createElement('tr');
 				tr.setAttribute("data-id",parentchild[i].data_id);
 				tr.setAttribute("data-pid",parentchild[i].data_pid);
 				if(i==0){
-					tr.setAttribute("class","treegrid-"+parentchild[i].data_id);}else{
-					
-					tr.setAttribute("class","treegrid-"+parentchild[i].data_id+"  treegrid-parent-"+parentchild[i].data_pid);
+					tr.setAttribute("class","treegrid-alfa"+parentchild[i].data_id);}else{
+					tr.setAttribute("class","treegrid-alfa"+parentchild[i].data_id+"  treegrid-parent-alfa"+parentchild[i].data_pid);
+				}
+				for(var a = 0;a<defaultBefCol.length;a++){
+					var td = document.createElement('td');
+					td.setAttribute("class",defaultBefCol[a].css);
+					td.innerHTML = defaultBefCol[a].title;
+					tr.appendChild(td);
 				}
 				for(var a = 0;a<data[i].length;a++){
 					var td = document.createElement('td');
 					td.setAttribute("class",data[i][a].css);
 					td.innerHTML = data[i][a].title;
+					tr.appendChild(td);
+				}
+				for(var a = 0;a<defaultcolum.length;a++){
+					var td = document.createElement('td');
+					td.setAttribute("class",defaultcolum[a].css);
+					td.innerHTML = defaultcolum[a].title;
 					tr.appendChild(td);
 				}
 				tbody.appendChild(tr);
@@ -70,18 +110,36 @@
 			,{"data_id":3,"data_pid":1}
 			,{"data_id":6,"data_pid":3}
 			,{"data_id":4,"data_pid":0}			
-			]
+			],
+	defaultcolumn:
+		[{"title":'<a href="javascript" class="btn btn-info btn-xs"><i class="fa fa-search-plus"></i> 查看</a><a href="javascript" class="btn btn-success btn-xs"><i class="fa fa-edit"></i> 修改</a><a href="javascript" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> 删除</a>',"css":'detail-col'}
+	],
+	defaultBefCol:
+		[{"title":'<label class="pos-rel"><input type="checkbox" class="ace"><span class="lbl"></span></label>',"css":'detail-col'},{"title":"chen44","css":'fdd'}
+	],
 		}
 	BuildTr(ff);
-	//	初始化表格
+	//	鍒濆鍖栬〃鏍�
 
 	$('.table.table-bordered.table-hover').treegrid({
-		treeColumn:'1',
+		treeColumn:'1',initialState: 'collapsed',
 		expanderExpandedClass: 'ace-icon fa fa-home home-icon',
 		expanderCollapsedClass: 'glyphicon glyphicon-cloud'
 	    }
 	); 
-  
+	layui.use(['laypage', 'layer'], function(){
+		  var laypage = layui.laypage
+		  ,layer = layui.layer;
+		  
+		  laypage({
+		    cont: 'page'
+		    ,pages: 100 //总页数
+		    ,groups: 5 //连续显示分页数
+		    ,first: false
+		    ,last: false
+		    ,skin: '#1E9FFF'
+		  });
+	});
 })(jQuery);
   
 

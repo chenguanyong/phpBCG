@@ -7,6 +7,7 @@ use think\Controller;
 use think\View;
 use think\Validate;
 use app\index\mode\User_mode;
+use think\Db;
 class Login extends Controller{
     
     //验证登陆规则
@@ -67,8 +68,8 @@ class Login extends Controller{
        
        Session::set("UserName", $username);
        Session::set("UserID", $UserID);
-      // $view = new View();
-      // return $view->fetch('index/index'); //$password;;
+       $roleID = Db::table("ce_role_user")->where("UserID",$UserID)->find();
+       Session::set("RoleID",$roleID['RoleID']);
        return json_encode(array("res" =>'1'));
     }
     

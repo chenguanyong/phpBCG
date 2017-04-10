@@ -12,26 +12,19 @@
 // 应用公共文件
 use think\Session;
 function CheckUser(){
-    
     if(Session::has('UserName')){
-    
         $username = Session::get('UserName');
     }else{
-        
         return false;
     }
     $UserID = '';
     if(Session::has('UserID')){
-    
         $UserID = Session::get('UserID');
     }else{
         return false;
     }
     if($UserID == 0){
-    
         return false;
     }
-    
     return $UserID;    
-    
 }
