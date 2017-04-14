@@ -6,7 +6,7 @@ use think\Session;
 use think\Controller;
 use think\View;
 use think\Validate;
-use app\index\mode\User_mode;
+use app\index\model\User_mode;
 use think\Db;
 class Login extends Controller{
     

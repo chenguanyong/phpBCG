@@ -1,7 +1,7 @@
 <?php
 namespace app\index\controller;
 use think\controller;
-use app\index\mode\User_mode;
+use app\index\model\User_mode;
 use think\View;
 use think\Session;
 use think\Request;

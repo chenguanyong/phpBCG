@@ -27,7 +27,7 @@ class Menu extends Base
             return $view->fetch('Login/login');
         }
         $username = Session::get("UserName");
-        $menudata = new \app\index\mode\Menu();
+        $menudata = new \app\index\model\Menu();
         $ParentID =$query_data['id'];
         $result = $menudata->getMenuParentID($ParentID);
         return json_encode($result,JSON_UNESCAPED_UNICODE);
@@ -37,7 +37,7 @@ class Menu extends Base
         $request = Request::instance();
         //获取请求参数
         $query_data = $request->param();
-        $menudata = new \app\index\mode\Menu();
+        $menudata = new \app\index\model\Menu();
         $menuinfo = $menudata ->getData(['MenuID'=>$query_data['menuID']]);
         if($menuinfo == null){
             return json_encode(array('0'));
@@ -89,7 +89,7 @@ class Menu extends Base
           if(!is_numeric($num)){
               return json_encode(array("code"=>0,"msg"=>"输入页码容量无效"),JSON_UNESCAPED_UNICODE);
           }
-          $menu = new \app\index\mode\Menu();
+          $menu = new \app\index\model\Menu();
           $map = array("ce_menu.IsDelete"=>0);
           $result = $menu ->getMenuByID($roleID, $id, $map, $page, $num);
           if($result == null){
@@ -129,7 +129,7 @@ class Menu extends Base
             if(!is_numeric($id)){
                 return json_encode(array("code"=>0,"msg"=>"输入id无效"),JSON_UNESCAPED_UNICODE);
             }
-            $menu = new \app\index\mode\Menu();
+            $menu = new \app\index\model\Menu();
             $map = array("ce_menu.IsDelete"=>0);
             $result = $menu ->getChildMenuByID($roleID, $id);
             if($result == null){

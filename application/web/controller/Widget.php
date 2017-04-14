@@ -2,7 +2,7 @@
 namespace app\web\controller;
 
 use think\Controller;
-use web\mode\WidgetModel;
+use web\model\WidgetModel;
 class Widget extends Controller
 {
     public function index(){

@@ -1,10 +1,10 @@
 <?php
 namespace app\index\controller;
 use think\Controller;
-use app\index\mode\Login;
+use app\index\model\Login;
 use think\View;
 use think\Session;
-use app\index\mode\Menu;
+use app\index\model\Menu;
 
 class Index extends Controller
 {

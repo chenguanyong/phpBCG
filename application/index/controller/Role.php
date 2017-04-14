@@ -15,7 +15,7 @@ class Role
             return $view->fetch('Login/login');            
         }
         $username = Session::get("UserName");
-        $menudata = \app\index\mode\Menu::getMenuData(1);
+        $menudata = \app\index\model\Menu::getMenuData(1);
         $buildMenuhtml = new \lib\html\BuildMenuHtml($menudata);
         
         $meunhtml = $buildMenuhtml->buildMenu();
@@ -36,7 +36,7 @@ class Role
          //var_dump($query_data);
          //exit;
          //$role = new \app\index\mode\Role($query_data['page'],$query_data['rows']);
-         $role = new \app\index\mode\Role();
+         $role = new \app\index\model\Role();
          $result = $role->getRole($query_data['page'],$query_data['rows']);
          
          return json_encode($result, JSON_UNESCAPED_UNICODE);
@@ -44,7 +44,7 @@ class Role
      
      public function setRole(){
          
-         $role = new \app\index\mode\Role();
+         $role = new \app\index\model\Role();
          //初始化请求
          $request = Request::instance();
          
@@ -78,7 +78,7 @@ class Role
      public function getRoleList(){
 
           
-         $result = \app\index\mode\Role::column('RoleID','RoleName');
+         $result = \app\index\model\Role::column('RoleID','RoleName');
 
         $back_array = array();
         $int_array = 0;

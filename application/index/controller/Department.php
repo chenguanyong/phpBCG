@@ -1,10 +1,10 @@
 <?php
 namespace app\index\controller;
 use think\controller;
-use app\index\mode\Login;
+use app\index\model\Login;
 use think\View;
 use think\Session;
-use app\index\mode\Department_mode;
+use app\index\model\Department_mode;
 use think\Request;
 class Department
 {
