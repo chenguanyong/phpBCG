@@ -6,7 +6,7 @@ use think\Session;
 use think\Controller;
 use think\View;
 use think\Validate;
-use app\index\model\User_mode;
+use app\index\model\UserModel;
 use think\Db;
 class Login extends Controller{
     
@@ -49,7 +49,7 @@ class Login extends Controller{
            return json_encode(array("res" =>'0'));           
        }
        //初始化模型
-       $user = new User_mode();
+       $user = new UserModel();
         //echo $data_array[0];
         //exit;
        $user_object = $user->getAllUserData($data_array[0]);

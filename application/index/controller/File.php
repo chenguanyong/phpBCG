@@ -1,11 +1,10 @@
 <?php
 namespace app\index\controller;
 use think\controller;
-use app\index\model\UserModel;
+use app\index\model\User_mode;
 use think\View;
 use think\Session;
 use think\Request;
-use think\Db;
 use app\common\controller\Base;
 
 
@@ -30,7 +29,7 @@ class User extends Base
         //获取请求参数
         $query_data = $request->param();
         
-        $user = new UserModel(); 
+        $user = new User_mode(); 
         $user_array = $user->getUserByDeparID(1,$query_data['iDisplayStart'],$query_data['iDisplayLength']);
         if($user_array == null){
             
@@ -50,7 +49,7 @@ class User extends Base
             
             $data = array("UserName"=>$query_data["loginName"],"Names"=>$query_data["name"],"PassWord"=>md5(trim($query_data["newPassword"])),"DepartmentID"=>$query_data["officeNameID"],"companyID"=>$query_data["companyID"],"phone"=>$query_data["phone"],"moblie"=>$query_data["mobile"],"IsDelete"=>$query_data["loginFlag"]);
             $datainfo = array("bz"=>$query_data["remarks"],"email"=>$query_data["email"],"workID"=>$query_data["noID"]);
-            $user = new UserModel();
+            $user = new User_mode();
             if($query_data["type"] == 1){
                 
                 $result = $user->addUser($data,$datainfo);
@@ -68,7 +67,7 @@ class User extends Base
     //删除用户
     public function deleUser(){
         $id = input("post.id");
-        $user = new UserModel();
+        $user = new User_mode();
        return $user->dele($id);
         
     }

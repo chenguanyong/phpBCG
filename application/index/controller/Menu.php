@@ -1,11 +1,11 @@
 <?php
 namespace app\index\controller;
 use think\controller;
-use think\View;
 use think\Session;
 use think\Request;
 use app\common\controller\Base;
 use lib\html\tag\input;
+use app\index\model\MenuModel;
 
 class Menu extends Base
 {
@@ -16,6 +16,7 @@ class Menu extends Base
     
     //通过父id获取菜单
     public function getMenu(){
+        
         //初始化请求
         $request = Request::instance();
         //获取请求参数
@@ -24,10 +25,10 @@ class Menu extends Base
         $username = '';
         $UserID = CheckUser();
         if($UserID == false){
-            return $view->fetch('Login/login');
+            return $this->fetch('Login/login');
         }
         $username = Session::get("UserName");
-        $menudata = new \app\index\model\Menu();
+        $menudata = new MenuModel();
         $ParentID =$query_data['id'];
         $result = $menudata->getMenuParentID($ParentID);
         return json_encode($result,JSON_UNESCAPED_UNICODE);
@@ -37,7 +38,7 @@ class Menu extends Base
         $request = Request::instance();
         //获取请求参数
         $query_data = $request->param();
-        $menudata = new \app\index\model\Menu();
+        $menudata = new MenuModel();
         $menuinfo = $menudata ->getData(['MenuID'=>$query_data['menuID']]);
         if($menuinfo == null){
             return json_encode(array('0'));
@@ -46,26 +47,74 @@ class Menu extends Base
         }
     }
    /**
-     * [add 添加菜单]
+     * [add 添加菜单ajax]
      * @return [type] [description]
      * @author
      */
     public function add(){
-        
-        
+        if(request()->isAjax()){
+            $key = input("post.");
+            if(is_array($key)){
+               return json_encode(array("code"=>0,"msg"=>"参数无效"),JSON_UNESCAPED_UNICODE);
+            }
+            $menu = new MenuModel();
+            $result = $menu->addMenu($key);
+            if($result == null){
+                return json_encode(array("code"=>0,"msg"=>"添加菜单失败"),JSON_UNESCAPED_UNICODE);
+            }else{
+                return json_encode(array("code"=>1,"msg"=>"添加菜单成功"),JSON_UNESCAPED_UNICODE);
+            }
+        }else{
+           return $this->fetch("index");
+        }
     }
    /**
      * [dele 删除菜单]
      * @return [type] [description]
      * @author
      */
-    public function dele(){}
+    public function dele(){
+        if(request()->isAjax()){
+            $key = input("post.");
+            if($key == 0){
+                return json_encode(array("code"=>0,"msg"=>"参数无效"),JSON_UNESCAPED_UNICODE);
+            }
+            $menu = new MenuModel();
+            $result = $menu->deleMenu($key);//删除菜单
+            if($result == null){
+                return json_encode(array("code"=>0,"msg"=>"添加菜单失败"),JSON_UNESCAPED_UNICODE);
+            }else{
+                return json_encode(array("code"=>1,"msg"=>"添加菜单成功"),JSON_UNESCAPED_UNICODE);
+            }
+        }else{
+            return $this->fetch("index");
+        }
+    }
     /**
      * [update 更新菜单]
      * @return [type] [description]
      * @author
      */
-    public function update(){}
+    public function update(){
+        if(request()->isAjax()){
+            $key = input("post.");
+            if(is_array($key)){
+                return json_encode(array("code"=>0,"msg"=>"参数无效"),JSON_UNESCAPED_UNICODE);
+            }
+            $menu = new MenuModel();
+            $id= 0;
+            $id = $key['ID'];
+            unset($key['ID']);
+            $result = $menu->updateMenu($key);//删除菜单
+            if($result == null){
+                return json_encode(array("code"=>0,"msg"=>"添加菜单失败"),JSON_UNESCAPED_UNICODE);
+            }else{
+                return json_encode(array("code"=>1,"msg"=>"添加菜单成功"),JSON_UNESCAPED_UNICODE);
+            }
+        }else{
+            return $this->fetch("index");
+        }       
+    }
     /**
      * [ajaxGetMenu 获取菜单]
      * @return [type] [description]
@@ -89,7 +138,7 @@ class Menu extends Base
           if(!is_numeric($num)){
               return json_encode(array("code"=>0,"msg"=>"输入页码容量无效"),JSON_UNESCAPED_UNICODE);
           }
-          $menu = new \app\index\model\Menu();
+          $menu = new MenuModel();
           $map = array("ce_menu.IsDelete"=>0);
           $result = $menu ->getMenuByID($roleID, $id, $map, $page, $num);
           if($result == null){
@@ -129,7 +178,7 @@ class Menu extends Base
             if(!is_numeric($id)){
                 return json_encode(array("code"=>0,"msg"=>"输入id无效"),JSON_UNESCAPED_UNICODE);
             }
-            $menu = new \app\index\model\Menu();
+            $menu = new MenuModel();
             $map = array("ce_menu.IsDelete"=>0);
             $result = $menu ->getChildMenuByID($roleID, $id);
             if($result == null){

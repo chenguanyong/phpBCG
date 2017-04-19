@@ -1,10 +1,9 @@
-<title>管理员管理</title>
 <div class="row" style="margin:0px;">
   <div class="col-xs-3" style="border:#000 0px solid; padding:2px">
     <div class="col-xs-12">
       <div class="widget-box">
         <div class="widget-header widget-header-flat">
-          <h4 class="widget-title smaller">部门列表</h4>
+          <h4 class="widget-title smaller">閮ㄩ棬鍒楄〃</h4>
         </div>
 
         <div class="widget-body" style="font-size:10px; height:700px; overflow:auto">
@@ -23,7 +22,7 @@
       <div class="panel-body">
         <div class="row">
           <div class="col-xs-5">
-            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">归属公司</label>
+            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">褰掑睘鍏徃</label>
 
             <div class="input-group">
               <span class="input-group-addon" id="basic-addon1">@</span> <input type="text" class="form-contro3" placeholder="Username" aria-describedby="basic-addon1" />
@@ -31,7 +30,7 @@
           </div>
 
           <div class="col-xs-5">
-            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">归属部门</label>
+            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">褰掑睘閮ㄩ棬</label>
 
             <div class="input-group">
               <span class="input-group-addon" id="basic-addon1">@</span> <input type="text" class="form-contro3" placeholder="Username" aria-describedby="basic-addon1" />
@@ -44,7 +43,7 @@
     <div class="row">
       <div class="col-xs-5">
         <div class="clearfix">
-          <button class="btn btn-sm btn-primary" data-type='3' data-toggle="modal" data-target="#myModal" data-whatever="修改用户">修改</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='1' data-whatever="新增用户">添加</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='2' data-whatever="删除用户">删除</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="查看用户信息">查看</button>
+          <button class="btn btn-sm btn-primary" data-type='3' data-toggle="modal" data-target="#myModal" data-whatever="淇敼鐢ㄦ埛">淇敼</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='1' data-whatever="鏂板鐢ㄦ埛">娣诲姞</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='2' data-whatever="鍒犻櫎鐢ㄦ埛">鍒犻櫎</button> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="鏌ョ湅鐢ㄦ埛淇℃伅">鏌ョ湅</button>
         </div>
       </div>
 
@@ -84,9 +83,9 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="bootbox-close-button close" data-dismiss="modal">×</button>
+          <button type="button" class="bootbox-close-button close" data-dismiss="modal">脳</button>
 
-          <h4 class="modal-title" id="ff">新增用户</h4>
+          <h4 class="modal-title" id="ff">鏂板鐢ㄦ埛</h4>
         </div>
 
         <div class="modal-body">
@@ -95,135 +94,135 @@
               <table class="table table-bordered table-condensed dataTables-example dataTable no-footer">
                 <tbody>
                   <tr>
-                    <td class="width-15 active"><label class="pull-right"><font color="red">*</font>头像：</label></td>
+                    <td class="width-15 active"><label class="pull-right"><font color="red">*</font>澶村儚锛�</label></td>
 
                     <td class="width-35">
                       <input id="nameImage" name="photo" maxlength="255" class="input-xlarge" type="hidden" value="" />
 
                       <ol id="nameImagePreview">
-                        <li style="list-style:none;padding-top:5px;">无</li>
-                      </ol><a href="javascript:" onclick="nameImageFinderOpen();" class="btn btn-primary">选择</a>&nbsp;<a href="javascript:" onclick="nameImageDelAll();" class="btn btn-default">清除</a>
+                        <li style="list-style:none;padding-top:5px;">鏃�</li>
+                      </ol><a href="javascript:" onclick="nameImageFinderOpen();" class="btn btn-primary">閫夋嫨</a>&nbsp;<a href="javascript:" onclick="nameImageDelAll();" class="btn btn-default">娓呴櫎</a>
                     </td>
 
-                    <td class="width-15"><label class="pull-right"><font color="red">*</font>归属公司:</label></td>
+                    <td class="width-15"><label class="pull-right"><font color="red">*</font>褰掑睘鍏徃:</label></td>
 
                     <td class="width-35">
                       <input id="companyId" name="company.id" class="form-control required" type="hidden" value="1" aria-required="true" />
 
                       <div class="input-group">
-                        <input id="companyName" name="company.name" readonly="readonly" type="text" value="河南省投资促进局" data-msg-required="" class="form-control required" style="" aria-required="true" /> <span class="input-group-btn"><button type="button" id="companyButton" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" data-whatever="#companyName"></button></span>
+                        <input id="companyName" name="company.name" readonly="readonly" type="text" value="娌冲崡鐪佹姇璧勪績杩涘眬" data-msg-required="" class="form-control required" style="" aria-required="true" /> <span class="input-group-btn"><button type="button" id="companyButton" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" data-whatever="#companyName"></button></span>
                       </div><label id="companyName-error" class="error" for="companyName" style="display:none"></label>
                     </td>
                   </tr>
 
                   <tr>
-                    <td class="active"><label class="pull-right"><font color="red">*</font>归属部门:</label></td>
+                    <td class="active"><label class="pull-right"><font color="red">*</font>褰掑睘閮ㄩ棬:</label></td>
 
                     <td>
                       <input id="officeId" name="office.id" class="form-control required" type="hidden" value="1" aria-required="true" />
 
                       <div class="input-group">
-                        <input id="officeName" name="office.name" readonly="readonly" type="text" value="河南省投资促进局" data-msg-required="" class="form-control required" style="" aria-required="true" /> <span class="input-group-btn"><button type="button" id="officeButton" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" data-whatever="#officeName"></button></span>
+                        <input id="officeName" name="office.name" readonly="readonly" type="text" value="娌冲崡鐪佹姇璧勪績杩涘眬" data-msg-required="" class="form-control required" style="" aria-required="true" /> <span class="input-group-btn"><button type="button" id="officeButton" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" data-whatever="#officeName"></button></span>
                       </div><label id="officeName-error" class="error" for="officeName" style="display:none"></label>
                     </td>
 
-                    <td class="active"><label class="pull-right"><font color="red">*</font>工号:</label></td>
+                    <td class="active"><label class="pull-right"><font color="red">*</font>宸ュ彿:</label></td>
 
                     <td><input id="no" name="no" class="form-control required" type="text" value="" maxlength="50" aria-required="true" /></td>
                   </tr>
 
                   <tr>
-                    <td class="active"><label class="pull-right"><font color="red">*</font>姓名:</label></td>
+                    <td class="active"><label class="pull-right"><font color="red">*</font>濮撳悕:</label></td>
 
                     <td><input id="name" name="name" class="form-control required" type="text" value="" maxlength="50" aria-required="true" /></td>
 
-                    <td class="active"><label class="pull-right"><font color="red">*</font>登录名:</label></td>
+                    <td class="active"><label class="pull-right"><font color="red">*</font>鐧诲綍鍚�:</label></td>
 
-                    <td><input id="oldLoginName" name="oldLoginName" type="hidden" value="" /> <input id="loginName" name="loginName" class="form-control required userName error" type="text" value="" maxlength="50" aria-required="true" aria-invalid="true" /><label id="loginName-error" class="error" for="loginName">这是必填字段</label></td>
+                    <td><input id="oldLoginName" name="oldLoginName" type="hidden" value="" /> <input id="loginName" name="loginName" class="form-control required userName error" type="text" value="" maxlength="50" aria-required="true" aria-invalid="true" /><label id="loginName-error" class="error" for="loginName">杩欐槸蹇呭～瀛楁</label></td>
                   </tr>
 
                   <tr>
-                    <td class="active"><label class="pull-right"><font color="red">*</font>密码:</label></td>
+                    <td class="active"><label class="pull-right"><font color="red">*</font>瀵嗙爜:</label></td>
 
                     <td><input id="newPassword" name="newPassword" type="password" value="" maxlength="50" minlength="3" class="form-control required" aria-required="true" /></td>
 
-                    <td class="active"><label class="pull-right"><font color="red">*</font>确认密码:</label></td>
+                    <td class="active"><label class="pull-right"><font color="red">*</font>纭瀵嗙爜:</label></td>
 
                     <td><input id="confirmNewPassword" name="confirmNewPassword" type="password" class="form-control required" value="" maxlength="50" minlength="3" equalto="#newPassword" aria-required="true" /></td>
                   </tr>
 
                   <tr>
-                    <td class="active"><label class="pull-right">邮箱:</label></td>
+                    <td class="active"><label class="pull-right">閭:</label></td>
 
                     <td><input id="email" name="email" class="form-control email" type="text" value="" maxlength="100" /></td>
 
-                    <td class="active"><label class="pull-right">电话:</label></td>
+                    <td class="active"><label class="pull-right">鐢佃瘽:</label></td>
 
                     <td><input id="phone" name="phone" class="form-control" type="text" value="" maxlength="100" /></td>
                   </tr>
 
                   <tr>
-                    <td class="active"><label class="pull-right">手机:</label></td>
+                    <td class="active"><label class="pull-right">鎵嬫満:</label></td>
 
                     <td><input id="mobile" name="mobile" class="form-control" type="text" value="" maxlength="100" /></td>
 
-                    <td class="active"><label class="pull-right">是否允许登录:</label></td>
+                    <td class="active"><label class="pull-right">鏄惁鍏佽鐧诲綍:</label></td>
 
                     <td><select id="loginFlag" name="loginFlag" class="form-control">
                       <option value="1" selected="selected">
-                        是
+                        鏄�
                       </option>
 
                       <option value="0">
-                        否
+                        鍚�
                       </option>
                     </select></td>
                   </tr>
 
                   <tr>
-                    <td class="active"><label class="pull-right">用户类型:</label></td>
+                    <td class="active"><label class="pull-right">鐢ㄦ埛绫诲瀷:</label></td>
 
                     <td><select id="userType" name="userType" class="form-control">
                       <option value="" selected="selected">
-                        请选择
+                        璇烽�夋嫨
                       </option>
 
                       <option value="1">
-                        系统管理
+                        绯荤粺绠＄悊
                       </option>
 
                       <option value="2">
-                        部门经理
+                        閮ㄩ棬缁忕悊
                       </option>
 
                       <option value="3">
-                        普通用户
+                        鏅�氱敤鎴�
                       </option>
                     </select></td>
 
-                    <td class="active"><label class="pull-right"><font color="red">*</font>用户角色:</label></td>
+                    <td class="active"><label class="pull-right"><font color="red">*</font>鐢ㄦ埛瑙掕壊:</label></td>
 
                     <td>
                       <div class="icheckbox_square-green" style="position: relative;">
                         <span><input id="roleIdList1" name="roleIdList" class="i-checks required" type="checkbox" value="5" aria-required="true" style="position: absolute; opacity: 0;" /><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></span>
-                      </div><span><label for="roleIdList1" class="">本部门管理员1</label></span>
+                      </div><span><label for="roleIdList1" class="">鏈儴闂ㄧ鐞嗗憳1</label></span>
 
                       <div class="icheckbox_square-green" style="position: relative;">
                         <span><input id="roleIdList2" name="roleIdList" class="i-checks required" type="checkbox" value="1c54e003c1fc4dcd9b087ef8d48abac3" aria-required="true" style="position: absolute; opacity: 0;" /><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></span>
-                      </div><span><label for="roleIdList2">管理员</label></span>
+                      </div><span><label for="roleIdList2">绠＄悊鍛�</label></span>
 
                       <div class="icheckbox_square-green" style="position: relative;">
                         <span><input id="roleIdList3" name="roleIdList" class="i-checks required" type="checkbox" value="caacf61017114120bcf7bf1049b6d4c3" aria-required="true" style="position: absolute; opacity: 0;" /><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></span>
-                      </div><span><label for="roleIdList3">部门管理员</label></span>
+                      </div><span><label for="roleIdList3">閮ㄩ棬绠＄悊鍛�</label></span>
 
                       <div class="icheckbox_square-green" style="position: relative;">
                         <span><input id="roleIdList4" name="roleIdList" class="i-checks required" type="checkbox" value="781acb2361244e49aef509c8688c3ec2" aria-required="true" style="position: absolute; opacity: 0;" /><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></span>
-                      </div><span><label for="roleIdList4" class="">投资促进局</label></span><input type="hidden" name="_roleIdList" value="on" /> <label id="roleIdList-error" class="error" for="roleIdList"></label>
+                      </div><span><label for="roleIdList4" class="">鎶曡祫淇冭繘灞�</label></span><input type="hidden" name="_roleIdList" value="on" /> <label id="roleIdList-error" class="error" for="roleIdList"></label>
                     </td>
                   </tr>
 
                   <tr>
-                    <td class="active"><label class="pull-right">备注:</label></td>
+                    <td class="active"><label class="pull-right">澶囨敞:</label></td>
 
                     <td>
                     <textarea id="remarks" name="remarks" maxlength="200" class="form-control" rows="3">
@@ -240,7 +239,7 @@
         </div>
 
         <div class="modal-footer">
-          <button data-bb-handler="cancel" type="button" data-dismiss="modal" class="btn btn-default">关闭</button> <button data-bb-handler="confirm" id="sure_button" type="button" data-id="0" data-type="0" class="btn btn-primary">确定</button>
+          <button data-bb-handler="cancel" type="button" data-dismiss="modal" class="btn btn-default">鍏抽棴</button> <button data-bb-handler="confirm" id="sure_button" type="button" data-id="0" data-type="0" class="btn btn-primary">纭畾</button>
         </div>
       </div>
     </div>
@@ -254,7 +253,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
-        <h4 class="modal-title" id="myModalLabel">部门列表</h4>
+        <h4 class="modal-title" id="myModalLabel">閮ㄩ棬鍒楄〃</h4>
       </div>
 
       <div class="modal-body">
@@ -268,7 +267,7 @@
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" id='depart'   data-tree='' data-value='' class="btn btn-primary">确定</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">鍏抽棴</button> <button type="button" id='depart'   data-tree='' data-value='' class="btn btn-primary">纭畾</button>
       </div>
     </div>
   </div>
@@ -276,17 +275,17 @@
 
 <div class="col-sm-6">
   <div id="dialog-message" class="hide">
-    <p>您确定要删除该用户？</p>
+    <p>鎮ㄧ‘瀹氳鍒犻櫎璇ョ敤鎴凤紵</p>
   </div><!-- #dialog-message -->
   <!-- #dialog-confirm -->
 </div>
 
-<div id="dialog" title="提示信息" style='display:none'>
-  <p>请先选中一行！</p>
+<div id="dialog" title="鎻愮ず淇℃伅" style='display:none'>
+  <p>璇峰厛閫変腑涓�琛岋紒</p>
 </div>
 
-<div id="dialog_delete" title="提示信息" style='display:none'>
-  <p>确定要删除！</p>
+<div id="dialog_delete" title="鎻愮ず淇℃伅" style='display:none'>
+  <p>纭畾瑕佸垹闄わ紒</p>
 </div>
 <script>
 
@@ -296,22 +295,22 @@ $(function ()
     function SubmitFormValue()
     {
 
-        var companyName = $('#companyName').val(); //获取归属公司id和值
+        var companyName = $('#companyName').val(); //鑾峰彇褰掑睘鍏徃id鍜屽��
         var companyID = $('#companyName').attr("data-companyID");
-        var officeName = $('#officeName').val(); //归属办公室
+        var officeName = $('#officeName').val(); //褰掑睘鍔炲叕瀹�
         var officeNameID = $('#officeName').attr("data-companyID");
-        var noID = $('#no').val(); //工号
-        var loginName = $('#loginName').val(); //登录名
-        var name = $('#name').val(); //姓名
-        var newPassword = $('#newPassword').val(); //密码
-        var confirmNewPassword = $('#confirmNewPassword').val(); //重复密码
-        var email = $('#email').val(); //邮箱
+        var noID = $('#no').val(); //宸ュ彿
+        var loginName = $('#loginName').val(); //鐧诲綍鍚�
+        var name = $('#name').val(); //濮撳悕
+        var newPassword = $('#newPassword').val(); //瀵嗙爜
+        var confirmNewPassword = $('#confirmNewPassword').val(); //閲嶅瀵嗙爜
+        var email = $('#email').val(); //閭
         var mobile = $('#mobile').val();
         var phone = $('#phone').val();
-        var loginFlag = $('#loginFlag').val(); //是否允许登录
-        var userType = $('#userType').val(); //用户类型
-        var userRole = $('[name=roleIdList]').children('[checked=true]').attr('value'); //用户角色
-        var remarks = $('#remarks').val(); //备注
+        var loginFlag = $('#loginFlag').val(); //鏄惁鍏佽鐧诲綍
+        var userType = $('#userType').val(); //鐢ㄦ埛绫诲瀷
+        var userRole = $('[name=roleIdList]').children('[checked=true]').attr('value'); //鐢ㄦ埛瑙掕壊
+        var remarks = $('#remarks').val(); //澶囨敞
         var id = $("#sure_button").attr("data-id");
         var type = $("#sure_button").attr("data-type");
         $.post('{$Think.config.__PUBLIC__}/index/User/editUser',
@@ -491,7 +490,7 @@ $("#id-btn-dialog1").on('click', function (e)
     var dialog = $("#dialog-message").removeClass('hide').dialog(
         {
             modal : true,
-            title : "<div class='widget-header widget-header-small'><h4 class='smaller'><i class='ace-icon fa fa-check'></i>警告信息</h4></div>",
+            title : "<div class='widget-header widget-header-small'><h4 class='smaller'><i class='ace-icon fa fa-check'></i>璀﹀憡淇℃伅</h4></div>",
             title_html : true,
             buttons : [
                 {
@@ -542,32 +541,32 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                     },
                     {
                         "data" : "UserName",
-                        "title" : "登录名",
+                        "title" : "鐧诲綍鍚�",
                         "orderable" : false,
                     },
                     {
                         "data" : "Name",
-                        "title" : "姓名",
+                        "title" : "濮撳悕",
                         "orderable" : false,
                     },
                     {
                         "data" : "phone",
-                        "title" : "电话",
+                        "title" : "鐢佃瘽",
                         "orderable" : false,
                     },
                     {
                         "data" : "moblie",
-                        "title" : "手机",
+                        "title" : "鎵嬫満",
                         "orderable" : false,
                     },
                     {
                         "data" : "CompanyName",
-                        "title" : "归属公司",
+                        "title" : "褰掑睘鍏徃",
                         "orderable" : false,
                     },
                     {
                         "data" : "DeparName",
-                        "title" : "归属部门",
+                        "title" : "褰掑睘閮ㄩ棬",
                         "orderable" : false,
                     },
                
@@ -592,7 +591,7 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                         "orderable" : false,
                         "targets" : 8,
                         "data" : null,
-                        "defaultContent" : "<a href='javascript' class='btn btn-info btn-xs'><i class='fa fa-search-plus'></i> 查看</a><a href='javascript' class='btn btn-success btn-xs'><i class='fa fa-edit'></i> 修改</a><a href='javascript'  class='btn btn-danger btn-xs'><i class='fa fa-trash'></i> 删除</a>"
+                        "defaultContent" : "<a href='javascript' class='btn btn-info btn-xs'><i class='fa fa-search-plus'></i> 鏌ョ湅</a><a href='javascript' class='btn btn-success btn-xs'><i class='fa fa-edit'></i> 淇敼</a><a href='javascript'  class='btn btn-danger btn-xs'><i class='fa fa-trash'></i> 鍒犻櫎</a>"
                     },
                     {
                         "targets": [ 7 ],
@@ -605,18 +604,18 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                 "drawCallback" : function (settings)  {},
                 "language" :
                 {
-                    "lengthMenu" : "每页 _MENU_ 条记录",
-                    "zeroRecords" : "没有找到记录",
-                    "info" : "第 _PAGE_ 页 ( 总共 _PAGES_ 页 )",
-                    "infoEmpty" : "无记录",
-                    "infoFiltered" : "(从 _MAX_ 条记录过滤)"
+                    "lengthMenu" : "姣忛〉 _MENU_ 鏉¤褰�",
+                    "zeroRecords" : "娌℃湁鎵惧埌璁板綍",
+                    "info" : "绗� _PAGE_ 椤� ( 鎬诲叡 _PAGES_ 椤� )",
+                    "infoEmpty" : "鏃犺褰�",
+                    "infoFiltered" : "(浠� _MAX_ 鏉¤褰曡繃婊�)"
                 },
                 "oPaginate" :
                 {
-                    "sFirst" : "首页",
-                    "sPrevious" : " 上一页 ",
-                    "sNext" : " 下一页 ",
-                    "sLast" : " 尾页 "
+                    "sFirst" : "棣栭〉",
+                    "sPrevious" : " 涓婁竴椤� ",
+                    "sNext" : " 涓嬩竴椤� ",
+                    "sLast" : " 灏鹃〉 "
                 },
 
                 "bProcessing" : true,
@@ -824,14 +823,14 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                     dialogClass : "no-close",
                     buttons : [
                         {
-                            text : "取消",
+                            text : "鍙栨秷",
                             click : function ()
                             {
                                 $(this).dialog("close");
                             }
                         },
                         {
-                            text : "确定",
+                            text : "纭畾",
                             click : function ()  {
                             	$(this).dialog("close");
                                 $.post('{$Think.config.__PUBLIC__}/index/User/deleUser',
@@ -856,22 +855,22 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
             }
             	$("#sure_button").attr("data-type",'3');
 
-                $('#companyName').val(d.CompanyName); //获取归属公司id和值
+                $('#companyName').val(d.CompanyName); //鑾峰彇褰掑睘鍏徃id鍜屽��
                 $('#companyName').attr("data-companyID", '1');
-                $('#officeName').val(d.DeparName); //归属办公室
+                $('#officeName').val(d.DeparName); //褰掑睘鍔炲叕瀹�
                 $('#officeName').attr("data-companyID", '2');
-                $('#no').val('1234'); //工号
-                $('#loginName').val(d.UserName); //登录名
-                $('#name').val(d.Name); //姓名
-                $('#newPassword').val('123'); //密码
-                $('#confirmNewPassword').val('12'); //重复密码
-                $('#email').val('22'); //邮箱
+                $('#no').val('1234'); //宸ュ彿
+                $('#loginName').val(d.UserName); //鐧诲綍鍚�
+                $('#name').val(d.Name); //濮撳悕
+                $('#newPassword').val('123'); //瀵嗙爜
+                $('#confirmNewPassword').val('12'); //閲嶅瀵嗙爜
+                $('#email').val('22'); //閭
                 $('#mobile').val('15263');
-                $('#loginFlag').val(); //是否允许登录
-                $('#userType').val(); //用户类型
-                //$('[name=roleIdList]').childen();//用户角色
+                $('#loginFlag').val(); //鏄惁鍏佽鐧诲綍
+                $('#userType').val(); //鐢ㄦ埛绫诲瀷
+                //$('[name=roleIdList]').childen();//鐢ㄦ埛瑙掕壊
                 $("#sure_button").attr("data-id",d.ID);
-                $('#remarks').val('dfadsfadsf'); //备注
+                $('#remarks').val('dfadsfadsf'); //澶囨敞
             }
         }
         );
@@ -881,21 +880,21 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
         	$("#sure_button").attr("data-type",'4');
             var mytables = myTable.rows($(this).parent('td').parent('tr'))[0][0];
             var d = myTable.row(mytables).data();
-            $('#companyName').val(d.CompanyName); //获取归属公司id和值
+            $('#companyName').val(d.CompanyName); //鑾峰彇褰掑睘鍏徃id鍜屽��
             $('#companyName').attr("data-companyID", '1');
-            $('#officeName').val(d.DeparName); //归属办公室
+            $('#officeName').val(d.DeparName); //褰掑睘鍔炲叕瀹�
             $('#officeName').attr("data-companyID", '2');
-            $('#no').val('1234'); //工号
-            $('#loginName').val(d.UserName); //登录名
-            $('#name').val(d.Name); //姓名
-            $('#newPassword').val('123'); //密码
-            $('#confirmNewPassword').val('12'); //重复密码
-            $('#email').val('22'); //邮箱
+            $('#no').val('1234'); //宸ュ彿
+            $('#loginName').val(d.UserName); //鐧诲綍鍚�
+            $('#name').val(d.Name); //濮撳悕
+            $('#newPassword').val('123'); //瀵嗙爜
+            $('#confirmNewPassword').val('12'); //閲嶅瀵嗙爜
+            $('#email').val('22'); //閭
             $('#mobile').val('15263');
-            $('#loginFlag').val(); //是否允许登录
-            $('#userType').val(); //用户类型
-            //$('[name=roleIdList]').childen();//用户角色
-            $('#remarks').val('dfadsfadsf'); //备注
+            $('#loginFlag').val(); //鏄惁鍏佽鐧诲綍
+            $('#userType').val(); //鐢ㄦ埛绫诲瀷
+            //$('[name=roleIdList]').childen();//鐢ㄦ埛瑙掕壊
+            $('#remarks').val('dfadsfadsf'); //澶囨敞
             $('#myModal').modal('show');
         }
         );
@@ -905,21 +904,21 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
             var mytables = myTable.rows($(this).parent('td').parent('tr'))[0][0];
             var d = myTable.row(mytables).data();
             $("#sure_button").attr("data-id",d.ID);
-            $('#companyName').val(d.CompanyName); //获取归属公司id和值
+            $('#companyName').val(d.CompanyName); //鑾峰彇褰掑睘鍏徃id鍜屽��
             $('#companyName').attr("data-companyID", '1');
-            $('#officeName').val(d.DeparName); //归属办公室
+            $('#officeName').val(d.DeparName); //褰掑睘鍔炲叕瀹�
             $('#officeName').attr("data-companyID", '2');
-            $('#no').val('1234'); //工号
-            $('#loginName').val(d.UserName); //登录名
-            $('#name').val(d.Name); //姓名
-            $('#newPassword').val('123'); //密码
-            $('#confirmNewPassword').val('12'); //重复密码
-            $('#email').val('22'); //邮箱
+            $('#no').val('1234'); //宸ュ彿
+            $('#loginName').val(d.UserName); //鐧诲綍鍚�
+            $('#name').val(d.Name); //濮撳悕
+            $('#newPassword').val('123'); //瀵嗙爜
+            $('#confirmNewPassword').val('12'); //閲嶅瀵嗙爜
+            $('#email').val('22'); //閭
             $('#mobile').val('15263');
-            $('#loginFlag').val(); //是否允许登录
-            $('#userType').val(); //用户类型
-            //$('[name=roleIdList]').childen();//用户角色
-            $('#remarks').val('dfadsfadsf'); //备注
+            $('#loginFlag').val(); //鏄惁鍏佽鐧诲綍
+            $('#userType').val(); //鐢ㄦ埛绫诲瀷
+            //$('[name=roleIdList]').childen();//鐢ㄦ埛瑙掕壊
+            $('#remarks').val('dfadsfadsf'); //澶囨敞
             $('#myModal').modal('show');
         }
         );
@@ -932,14 +931,14 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                 dialogClass : "no-close",
                 buttons : [
                     {
-                        text : "取消",
+                        text : "鍙栨秷",
                         click : function ()
                         {
                             $(this).dialog("close");
                         }
                     },
                     {
-                        text : "确定",
+                        text : "纭畾",
                         click : function ()  {
                         	$(this).dialog("close");
                             var mytables = myTable.rows($('#dynamic-table tbody').find('[data-checked=1]').parent('label').parent('td').parent('tr'))[0][0];

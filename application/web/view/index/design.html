@@ -66,13 +66,13 @@
 							<!-- /section:custom/widget-box.toolbar -->
 							</div>
 					
-							<div class="widget-body" style="height:570px;background-color:#ffffff">
-								<div class="widget-main" >
-									dsfsdfsdf
-								</div>
+							<div class="widget-body" id="page_main" style="height:570px; background-color:#ffffff">
+
 								<div id="draggable" class="ui-widget-content">
 								  <p>Drag me around</p>
+								  
 								</div>
+								
 							</div>
 					</div>								
 			</div>
@@ -81,16 +81,16 @@
 </div>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
+  测试
 </button>
-
+<div id="dd">sdsfsd</div>
 <!-- Modal -->
 <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">对象属性</h4>
       </div>
       <div class="modal-body" style="padding:1px">
         <table class="table table-bordered table-striped" style="margin:0px">
@@ -98,30 +98,30 @@
 															<tr class="active ">
 																<td class="width-15">名称:</td>
 																<td class="width-35">
-																		<input type="text" id="form-field-1" placeholder="Username" class="col-xs-12 col-sm-12">
+																		<input type="text" id="name" placeholder="请输入名称" class="col-xs-12 col-sm-12">
 																</td>
 																<td class="width-15">背景颜色:</td>
 																<td class="width-35">
 																		
 																		<div class="btn-group">
-																		<input type="text" id="form-field-1" value="#668899"  class="col-xs-9 col-sm-9 colorwell">
+																		<input type="text" id="backgroudcolor" value="#668899"  class="col-xs-9 col-sm-9 colorwell">
 												<a data-toggle="dropdown" class="btn btn-success dropdown-toggle col-xs-2 col-sm-2" style="padding:4px;" aria-expanded="false">
 													<span class="ace-icon fa fa-caret-down icon-on-right"></span>
 												</a>
 
 												<div class="dropdown-menu dropdown-default">
-<div id="picker" ></div>
- <script type="text/javascript" charset="utf-8">
-  $(document).ready(function() {
-    //$('#demo').hide();
-    var f = $.farbtastic('#picker');
-    var p = $('#picker').css('opacity', 1);
-    var selected;
-    $('.colorwell')
-      .each(function () { f.linkTo(this);  });
- 
-  });
- </script>
+													<div id="picker" ></div>
+													 <script type="text/javascript" charset="utf-8">
+													  $(document).ready(function() {
+													    //$('#demo').hide();
+													    var f = $.farbtastic('#picker');
+													    var p = $('#picker').css('opacity', 1);
+													    var selected;
+													    $('.colorwell')
+													      .each(function () { f.linkTo(this);  });
+													 
+													  });
+													 </script>
 												</div>
 											</div>
 																</td>
@@ -140,7 +140,7 @@
 															 <tr class="active">
 																<td class="width-15">数据表</td>
 																<td class="width-35">
-																		<select class="form-control" id="form-field-select-1">
+																<select class="form-control" id="form-field-select-1">
 																<option value=""></option>
 																<option value="AL">Alabama</option>
 																<option value="AK">Alaska</option>
@@ -307,9 +307,7 @@
 </div>							
 								
 <script>
-  $( function() {
-	
-    $( "#draggable" ).draggable();
+  ( function() {
 	var setting = {
 			data: {
 				simpleData: {
@@ -328,7 +326,14 @@
 			edit: {
 				enable: true,
 				showRemoveBtn: false,
-				showRenameBtn: false
+				showRenameBtn: false,
+				drag: {
+					isCopy: false,
+					isMove: true,
+					prev: true,
+					next: true,
+					inner: false
+				}
 			},
 			check: {
 				enable: false
@@ -354,11 +359,23 @@
 		}
 
 		function beforeDrag(treeId, treeNodes) {
-
+			//var treeObj = $.fn.zTree.getZTreeObj("widgetTree");
+			//var node = treeObj.getNodeByTId("tree_10");
+				var id= treeNodes[0].tId;
+				$( "#"+id ).draggable();
+			    $( "#page_main" ).droppable({
+			        drop: function( event, ui ) {
+			          //alert(treeId);
+						$("#"+id).removeClass("ui-draggable");
+						$("#"+id).removeClass("ui-draggable-handle");
+						$("#"+id).attr("style","0");
+						console.log("dsfsd");
+			        }
+			      });
 			return true;
 		}
 		function beforeDrop(treeId, treeNodes, targetNode, moveType) {
-		
+		alert("df");
 			return ;
 		}
 		$(document).ready(function(){
@@ -368,11 +385,12 @@
 			//zTree.setting.edit.drag.inner = false;
 			//zTree.setting.edit.drag.next = false;
 		});    
-  } );
-  function ajaxObj(){
+  } )();
+  function ajaxSocket(obj){
 	  
 	  $.post(url,data,succes,"json");
   }
+  
 	var scripts = [null,"{$Think.config.__PUBLIC__}/static/components/_mod/jquery-ui.custom/jquery-ui.custom.js","{$Think.config.__PUBLIC__}/static/components/jqueryui-touch-punch/jquery.ui.touch-punch.js","{$Think.config.__PUBLIC__}/static/components/chosen/chosen.jquery.js","{$Think.config.__PUBLIC__}/static/components/fuelux/js/spinbox.js","{$Think.config.__PUBLIC__}/static/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js","{$Think.config.__PUBLIC__}/static/components/bootstrap-timepicker/js/bootstrap-timepicker.js","{$Think.config.__PUBLIC__}/static/components/moment/moment.js","{$Think.config.__PUBLIC__}/static/components/bootstrap-daterangepicker/daterangepicker.js","{$Think.config.__PUBLIC__}/static/components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js","{$Think.config.__PUBLIC__}/static/components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js","{$Think.config.__PUBLIC__}/static/components/jquery-knob/js/jquery.knob.js","{$Think.config.__PUBLIC__}/static/components/autosize/dist/autosize.js","{$Think.config.__PUBLIC__}/static/components/jquery-inputlimiter/jquery.inputlimiter.js","{$Think.config.__PUBLIC__}/static/components/jquery.maskedinput/dist/jquery.maskedinput.js","{$Think.config.__PUBLIC__}/static/components/_mod/bootstrap-tag/bootstrap-tag.js", null]
 	$('.page-content-area').ace_ajax('loadScripts', scripts, function() {
 	  //inline scripts related to this page
@@ -383,5 +401,28 @@
 		 });
 	  
 	});
+	/**
+	处理向服务器请求控件的请求
+	
+	*/
+	
+(function ($){
+	
+	function movegetwidght(){
+		
+		var html = $("#main_page").html();
+		$.post("../lskdfj",{id:"widghtid",html:html,type:0},function (data){
+			
+			
+			
+		},"json");
+	}
+	var obj = {
+			id:null,//控件的id
+			html:null,//已有的html内容
+			type:0//操作类型
+			
+	};
+})(jQuery);	
 </script>							
 								

@@ -1,10 +1,9 @@
 <?php
 namespace app\index\controller;
 use think\controller;
-use app\index\model\Login;
 use think\View;
 use think\Session;
-use app\index\model\Department_mode;
+use app\index\model\DepartmentModel;
 use think\Request;
 class Department
 {
@@ -15,7 +14,7 @@ class Department
     }
     //获取部门列表
     public function getDeparList(){
-        
+        $view = new View();
         //初始化请求
         $request = Request::instance();
          
@@ -32,7 +31,7 @@ class Department
         
         $username = Session::get("UserName");
         
-        $menudata = new Department_mode();
+        $menudata = new DepartmentModel();
         $ParentID =$query_data['id'];
         $result = $menudata->getDeparParentID($ParentID);
         //var_dump($result);

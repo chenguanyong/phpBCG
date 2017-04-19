@@ -4,7 +4,9 @@ use think\controller;
 use think\View;
 use think\Session;
 use think\Request;
-class Role
+use app\common\controller\Base;
+use app\index\model\RoleModel;
+class Role extends Base
 {
     public function index()
     {        $view = new View();
@@ -15,15 +17,8 @@ class Role
             return $view->fetch('Login/login');            
         }
         $username = Session::get("UserName");
-        $menudata = \app\index\model\Menu::getMenuData(1);
-        $buildMenuhtml = new \lib\html\BuildMenuHtml($menudata);
-        
-        $meunhtml = $buildMenuhtml->buildMenu();
 
-        //$user = new Login();
-        //$password = $user->getuserpassword('chen');
-        //$passwords = $user->addUser(['UserName'=>'guan','PassWord'=>'1456']);
-         return $view->fetch('index',['menuhtml'=>$meunhtml]); //$password;
+         return $view->fetch('index'); //$password;
     }
     
      public function getRole(){
@@ -36,7 +31,7 @@ class Role
          //var_dump($query_data);
          //exit;
          //$role = new \app\index\mode\Role($query_data['page'],$query_data['rows']);
-         $role = new \app\index\model\Role();
+         $role = new RoleModel();
          $result = $role->getRole($query_data['page'],$query_data['rows']);
          
          return json_encode($result, JSON_UNESCAPED_UNICODE);
@@ -44,7 +39,7 @@ class Role
      
      public function setRole(){
          
-         $role = new \app\index\model\Role();
+         $role = new RoleModel();
          //初始化请求
          $request = Request::instance();
          
@@ -78,7 +73,7 @@ class Role
      public function getRoleList(){
 
           
-         $result = \app\index\model\Role::column('RoleID','RoleName');
+         $result = RoleModel::column('RoleID','RoleName');
 
         $back_array = array();
         $int_array = 0;

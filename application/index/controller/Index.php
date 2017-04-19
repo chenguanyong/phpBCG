@@ -1,10 +1,9 @@
 <?php
 namespace app\index\controller;
 use think\Controller;
-use app\index\model\Login;
 use think\View;
 use think\Session;
-use app\index\model\Menu;
+use app\index\model\MenuModel;
 
 class Index extends Controller
 {
@@ -19,7 +18,7 @@ class Index extends Controller
             return $this->fetch('Login/login');            
         }
         $username = Session::get("UserName");
-        $menudata = Menu::getMenuData(1);
+        $menudata = MenuModel::getMenuData(1);
         
         $buildMenuhtml = new \lib\html\BuildMenuHtml($menudata);
         

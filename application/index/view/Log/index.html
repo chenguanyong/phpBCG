@@ -1,22 +1,6 @@
-<title>管理员管理</title>
+<title>日志管理</title>
 <div class="row" style="margin:0px;">
-  <div class="col-xs-3" style="border:#000 0px solid; padding:2px">
-    <div class="col-xs-12">
-      <div class="widget-box">
-        <div class="widget-header widget-header-flat">
-          <h4 class="widget-title smaller">部门列表</h4>
-        </div>
-
-        <div class="widget-body" style="font-size:10px; height:700px; overflow:auto">
-          <div class="widget-main" style="font-size:10px;overflow:auto">
-            <div id="usertreeview" class="tree" style="font-size:8px; width:100%; sScrollX:auto;sScrollY:auto"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="panel panel-default col-xs-9" style="border:#000 0px solid; padding:2px">
+  <div class="panel panel-default col-xs-12" style="border:#000 0px solid; padding:2px">
     <!-- div.table-responsive -->
 
     <div class="panel panel-default">
@@ -811,7 +795,7 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                 return false;
             }
             else
-            {	
+            {	 
                 var mytables = myTable.rows($('#dynamic-table tbody').find('[data-checked=1]').parent('label').parent('td').parent('tr'))[0][0];
                 var d = myTable.row(mytables).data();
             if (type == 2)

@@ -5,11 +5,10 @@ use app\index\model\UserModel;
 use think\View;
 use think\Session;
 use think\Request;
-use think\Db;
 use app\common\controller\Base;
 
 
-class User extends Base
+class Member extends Base
 {
     public function index(){
         $view = new View();
