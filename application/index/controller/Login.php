@@ -50,24 +50,23 @@ class Login extends Controller{
        }
        //初始化模型
        $user = new UserModel();
-        //echo $data_array[0];
-        //exit;
        $user_object = $user->getAllUserData($data_array[0]);
-      //var_dump($user_object);
-       //
-       //ses
        $username = $user_object->getAttr('UserName');
        $password = $user_object->getAttr("PassWord");
        $UserID = $user_object->getAttr("UserID");
-       
+       $CompanyID = $user_object->getAttr("CompanyID");
+       $DepartmentID = $user_object->getAttr("DepartmentID");
+       $CityID = $user_object->getAttr("CityID");
        $postpassword = md5($data_array[1]); 
        if($password != $postpassword){
            
            return json_encode(array("res" =>'0'));
        }
-       
        Session::set("UserName", $username);
        Session::set("UserID", $UserID);
+       Session::set("CompanyID", $UserID);
+       Session::set("DepartmentID", $UserID);
+       Session::set("CityID", $UserID);
        $roleID = Db::table("ce_role_user")->where("UserID",$UserID)->find();
        Session::set("RoleID",$roleID['RoleID']);
        return json_encode(array("res" =>'1'));
@@ -75,10 +74,7 @@ class Login extends Controller{
     
     //退出
     public function loginOut(){
-        
         Session::clear();
-        //echo "dsfsd";
-        //echo ROOT_PATH;
         return $this->fetch('login');
     }
 }

@@ -25,8 +25,6 @@ class User extends Base
 
         //初始化请求
         $request = Request::instance();
-       // var_dump($request);
-       // exit;
         //获取请求参数
         $query_data = $request->param();
         

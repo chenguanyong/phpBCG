@@ -25,22 +25,12 @@ class DepartmentModel extends Model
     public function saveDepart($depart){
         
         $result = $this->save($depart);
-        if($result == null){
-            
-            return null;
-        }
         return $result;
     }
     
     //更新数据
     public function updateDepart($depart,$where){
-        
-
         $result = $this->save($depart,$where);
-        if($result == null){
-        
-            return null;
-        }
         return $result;
     }
     
@@ -48,12 +38,6 @@ class DepartmentModel extends Model
     public function deleteDepart($departValue, $where){
         
         $result = $this->save(['IsDelete'=>$departValue], $where);
-        
-        if($result == null){
-        
-            return null;
-        }
-        
         return $result;
         
     }
@@ -116,6 +100,9 @@ class DepartmentModel extends Model
             $result_array['message'] = '数据库错误';
         }
         return $result_array;
+    }
+    public function getDepartByParentID($id){
+      return  $result = $this->where("ParentID",$id)->select();
     }
 }
 

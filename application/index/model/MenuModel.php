@@ -136,9 +136,12 @@ class MenuModel extends Model
     }
     
     public function updateMenu($menudata,$menuID){
+        
         $result = $this->where(['MenuName'=>$menudata['MenuName']])->find();
+      // var_dump($result);
         if($result == null){
-            return false;
+            
+            return null;
         }
         return $this->save($menudata,['ID'=>$menuID]);
     }
@@ -150,7 +153,7 @@ class MenuModel extends Model
     public function getMenuByID($roleID,$id,$map,$Nowpage,$limits){
         
         $result = $this->field('ce_menu.*')->join('ce_menu_role', 'ce_menu.MenuID = ce_menu_role.MenuID')
-            ->where($map)->page($Nowpage, $limits)->order('ID desc')->select();
+            ->where($map)->page($Nowpage, $limits)->order('ID asc')->select();
         $rownum = $this->join('ce_menu_role', 'ce_menu.MenuID = ce_menu_role.MenuID')
             ->where($map)->count();
         if($rownum == 0){

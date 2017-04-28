@@ -1,0 +1,2699 @@
+[ 2017-04-25T16:02:37+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.291017s][吞吐率：3.44req/s] [内存消耗：1,842.82kb] [文件加载：38]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\Login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:02:38+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] lnbei.com/favicon.ico [运行时间：0.065004s][吞吐率：15.38req/s] [内存消耗：1,522.33kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:02:44+08:00 ] 127.0.0.1 127.0.0.1 POST /index/Login
+[ log ] lnbei.com/index/Login [运行时间：0.253015s][吞吐率：3.95req/s] [内存消耗：3,244.96kb] [文件加载：46]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+  'content-length' => '13',
+)
+[ info ] [ PARAM ] array (
+  'data' => 'chen-123',
+)
+[ info ] [ RUN ] app\index\controller\Login->index[ E:\f\phpace\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_user` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_user` WHERE  `UserName` = 'chen' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_role_user` [ RunTime:0.030002s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_role_user` WHERE  `UserID` = 1 LIMIT 1 [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:02:45+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.189011s][吞吐率：5.29req/s] [内存消耗：2,621.80kb] [文件加载：48]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\index.html [ array (
+  0 => 'menuhtml',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT DISTINCT 	menu.MenuID AS menuID, 	menu.MenuName AS MenuName, 	menu.ParentID AS ParentID, 	menu.Flag AS Flag, 	menu.URL AS URL FROM 	ce_menu AS menu, 	ce_menu_role AS menu_role WHERE 	menu.MenuID = menu_role.MenuID AND menu_role.IsDelete = 0 AND menu.IsDelete =0 AND menu.Flag =0 AND menu_role.RoleID =1 Order by menu.MenuID ASC [ RunTime:0.068004s ]
+[ error ] [8]未定义数组下标: 4[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 5[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 6[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 7[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 21[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 27[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 28[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 29[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 24[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 25[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 3[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 22[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:02:45+08:00 ] 127.0.0.1 127.0.0.1 GET /index/index/content
+[ log ] lnbei.com/index/index/content [运行时间：0.072004s][吞吐率：13.89req/s] [内存消耗：1,842.08kb] [文件加载：38]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'content',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->content[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\content.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:02:52+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Menu/index/
+[ log ] lnbei.com/index/Menu/index/ [运行时间：0.088005s][吞吐率：11.36req/s] [内存消耗：2,000.45kb] [文件加载：40]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->index[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\menu\menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:02:52+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.113007s][吞吐率：8.85req/s] [内存消耗：3,240.59kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+  'content-length' => '25',
+)
+[ info ] [ PARAM ] array (
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 0 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:02:52+08:00 ] 127.0.0.1 127.0.0.1 POST /index/menu/ajaxgetchildmenu.html
+[ log ] lnbei.com/index/menu/ajaxgetchildmenu.html [运行时间：0.209012s][吞吐率：4.78req/s] [内存消耗：3,300.58kb] [文件加载：52]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'menu',
+    2 => 'ajaxgetchildmenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+  'content-length' => '13',
+)
+[ info ] [ PARAM ] array (
+  'RoleID' => '1',
+  'id' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->ajaxGetChildMenu[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_menu` [ RunTime:0.008000s ]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'IsDelete' in where clause is ambiguous[E:\f\phpace\thinkphp\library\think\db\Connection.php:400]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:02:57+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.089005s][吞吐率：11.24req/s] [内存消耗：3,239.23kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+  'content-length' => '74',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'n' => '投资集团',
+  'lv' => '0',
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 3 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 116 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:02:58+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.443025s][吞吐率：2.26req/s] [内存消耗：3,247.65kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+  'content-length' => '74',
+)
+[ info ] [ PARAM ] array (
+  'id' => '3',
+  'n' => '控股企业',
+  'lv' => '1',
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 3 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 23 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 24 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 25 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 27 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 28 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 29 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 30 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 31 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 32 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 33 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 34 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 35 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 36 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 37 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 38 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 39 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 40 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 41 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 42 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 43 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 44 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 45 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 46 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 47 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 48 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 49 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 50 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 51 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 52 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 53 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 54 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 55 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 56 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 57 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 58 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 59 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 60 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 61 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 62 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 63 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 64 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 65 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 66 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 67 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 68 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 69 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 70 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 71 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 72 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 74 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 83 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 84 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 85 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 87 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 88 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 89 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 93 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 98 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 103 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 106 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 108 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:03:01+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.268015s][吞吐率：3.73req/s] [内存消耗：3,244.48kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+  'content-length' => '74',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+  'n' => '集团本部',
+  'lv' => '1',
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 5 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 6 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 7 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 8 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 9 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 11 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 13 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 14 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 15 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 16 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 18 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 19 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 20 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 21 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 22 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 90 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 91 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 92 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 99 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 100 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 101 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 107 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 109 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 111 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 112 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 113 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 117 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 118 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:07:27+08:00 ] 127.0.0.1 127.0.0.1 GET /static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map
+[ log ] lnbei.com/static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map [运行时间：0.045002s][吞吐率：22.22req/s] [内存消耗：1,523.02kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'components',
+    2 => 'bootstrap-datepicker',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:07:36+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.075004s][吞吐率：13.33req/s] [内存消耗：2,621.88kb] [文件加载：48]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\index.html [ array (
+  0 => 'menuhtml',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT DISTINCT 	menu.MenuID AS menuID, 	menu.MenuName AS MenuName, 	menu.ParentID AS ParentID, 	menu.Flag AS Flag, 	menu.URL AS URL FROM 	ce_menu AS menu, 	ce_menu_role AS menu_role WHERE 	menu.MenuID = menu_role.MenuID AND menu_role.IsDelete = 0 AND menu.IsDelete =0 AND menu.Flag =0 AND menu_role.RoleID =1 Order by menu.MenuID ASC [ RunTime:0.004000s ]
+[ error ] [8]未定义数组下标: 4[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 5[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 6[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 7[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 21[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 27[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 28[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 29[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 24[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 25[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 3[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 22[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:07:36+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Menu/index/
+[ log ] lnbei.com/index/Menu/index/ [运行时间：0.148009s][吞吐率：6.76req/s] [内存消耗：2,277.53kb] [文件加载：42]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->index[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\menu\menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:07:36+08:00 ] 127.0.0.1 127.0.0.1 GET /static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map
+[ log ] lnbei.com/static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map [运行时间：0.085005s][吞吐率：11.76req/s] [内存消耗：1,523.02kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'components',
+    2 => 'bootstrap-datepicker',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:07:36+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.151009s][吞吐率：6.62req/s] [内存消耗：3,240.59kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '25',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 0 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:07:36+08:00 ] 127.0.0.1 127.0.0.1 POST /index/menu/ajaxgetmenu.html
+[ log ] lnbei.com/index/menu/ajaxgetmenu.html [运行时间：0.129008s][吞吐率：7.75req/s] [内存消耗：1,909.72kb] [文件加载：38]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'menu',
+    2 => 'ajaxgetmenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'RoleID' => '1',
+  'id' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->ajaxGetMenu[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:10:51+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.085005s][吞吐率：11.76req/s] [内存消耗：2,621.88kb] [文件加载：48]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\index.html [ array (
+  0 => 'menuhtml',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT DISTINCT 	menu.MenuID AS menuID, 	menu.MenuName AS MenuName, 	menu.ParentID AS ParentID, 	menu.Flag AS Flag, 	menu.URL AS URL FROM 	ce_menu AS menu, 	ce_menu_role AS menu_role WHERE 	menu.MenuID = menu_role.MenuID AND menu_role.IsDelete = 0 AND menu.IsDelete =0 AND menu.Flag =0 AND menu_role.RoleID =1 Order by menu.MenuID ASC [ RunTime:0.004000s ]
+[ error ] [8]未定义数组下标: 4[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 5[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 6[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 7[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 21[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 27[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 28[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 29[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 24[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 25[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 3[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 22[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:10:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map
+[ log ] lnbei.com/static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map [运行时间：0.074004s][吞吐率：13.51req/s] [内存消耗：1,523.02kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'components',
+    2 => 'bootstrap-datepicker',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:10:52+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Menu/index/
+[ log ] lnbei.com/index/Menu/index/ [运行时间：0.127008s][吞吐率：7.87req/s] [内存消耗：2,277.52kb] [文件加载：42]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->index[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\menu\menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:10:52+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.123007s][吞吐率：8.13req/s] [内存消耗：3,240.59kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '25',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 0 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:10:52+08:00 ] 127.0.0.1 127.0.0.1 POST /index/menu/ajaxgetmenu.html
+[ log ] lnbei.com/index/menu/ajaxgetmenu.html [运行时间：0.204011s][吞吐率：4.90req/s] [内存消耗：3,292.63kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'menu',
+    2 => 'ajaxgetmenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '27',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'RoleID' => '1',
+  'id' => '2',
+  'num' => '10',
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->ajaxGetMenu[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_menu` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ce_menu`.* FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 ORDER BY ID desc LIMIT 0,10 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:12:11+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.075005s][吞吐率：13.33req/s] [内存消耗：2,621.88kb] [文件加载：48]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\index.html [ array (
+  0 => 'menuhtml',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT DISTINCT 	menu.MenuID AS menuID, 	menu.MenuName AS MenuName, 	menu.ParentID AS ParentID, 	menu.Flag AS Flag, 	menu.URL AS URL FROM 	ce_menu AS menu, 	ce_menu_role AS menu_role WHERE 	menu.MenuID = menu_role.MenuID AND menu_role.IsDelete = 0 AND menu.IsDelete =0 AND menu.Flag =0 AND menu_role.RoleID =1 Order by menu.MenuID ASC [ RunTime:0.002000s ]
+[ error ] [8]未定义数组下标: 4[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 5[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 6[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 7[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 21[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 27[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 28[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 29[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 24[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 25[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 3[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 22[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:12:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map
+[ log ] lnbei.com/static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map [运行时间：0.081005s][吞吐率：12.34req/s] [内存消耗：1,523.02kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'components',
+    2 => 'bootstrap-datepicker',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:12:12+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Menu/index/
+[ log ] lnbei.com/index/Menu/index/ [运行时间：0.092005s][吞吐率：10.87req/s] [内存消耗：2,000.44kb] [文件加载：40]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->index[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\menu\menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:12:12+08:00 ] 127.0.0.1 127.0.0.1 POST /index/menu/ajaxgetmenu.html
+[ log ] lnbei.com/index/menu/ajaxgetmenu.html [运行时间：0.145008s][吞吐率：6.90req/s] [内存消耗：3,292.63kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'menu',
+    2 => 'ajaxgetmenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '27',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'RoleID' => '1',
+  'id' => '2',
+  'num' => '10',
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->ajaxGetMenu[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_menu` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ce_menu`.* FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 ORDER BY ID desc LIMIT 0,10 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:12:12+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.224013s][吞吐率：4.46req/s] [内存消耗：3,240.59kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '25',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 0 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:14:57+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.089005s][吞吐率：11.24req/s] [内存消耗：2,621.88kb] [文件加载：48]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\index.html [ array (
+  0 => 'menuhtml',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT DISTINCT 	menu.MenuID AS menuID, 	menu.MenuName AS MenuName, 	menu.ParentID AS ParentID, 	menu.Flag AS Flag, 	menu.URL AS URL FROM 	ce_menu AS menu, 	ce_menu_role AS menu_role WHERE 	menu.MenuID = menu_role.MenuID AND menu_role.IsDelete = 0 AND menu.IsDelete =0 AND menu.Flag =0 AND menu_role.RoleID =1 Order by menu.MenuID ASC [ RunTime:0.005001s ]
+[ error ] [8]未定义数组下标: 4[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 5[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 6[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 7[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 21[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 27[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 28[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 29[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 24[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 25[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 3[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 22[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:14:58+08:00 ] 127.0.0.1 127.0.0.1 GET /static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map
+[ log ] lnbei.com/static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map [运行时间：0.041003s][吞吐率：24.39req/s] [内存消耗：1,523.02kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'components',
+    2 => 'bootstrap-datepicker',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:14:58+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Menu/index/
+[ log ] lnbei.com/index/Menu/index/ [运行时间：0.099006s][吞吐率：10.10req/s] [内存消耗：2,277.52kb] [文件加载：42]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->index[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\menu\menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:14:58+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.121006s][吞吐率：8.26req/s] [内存消耗：3,240.59kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+  'content-length' => '25',
+)
+[ info ] [ PARAM ] array (
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 0 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:14:58+08:00 ] 127.0.0.1 127.0.0.1 POST /index/menu/ajaxgetmenu.html
+[ log ] lnbei.com/index/menu/ajaxgetmenu.html [运行时间：0.203011s][吞吐率：4.93req/s] [内存消耗：3,292.63kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'menu',
+    2 => 'ajaxgetmenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '27',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'RoleID' => '1',
+  'id' => '2',
+  'num' => '10',
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->ajaxGetMenu[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_menu` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ce_menu`.* FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 ORDER BY ID desc LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:22:23+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.078004s][吞吐率：12.82req/s] [内存消耗：2,621.88kb] [文件加载：48]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\index.html [ array (
+  0 => 'menuhtml',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT DISTINCT 	menu.MenuID AS menuID, 	menu.MenuName AS MenuName, 	menu.ParentID AS ParentID, 	menu.Flag AS Flag, 	menu.URL AS URL FROM 	ce_menu AS menu, 	ce_menu_role AS menu_role WHERE 	menu.MenuID = menu_role.MenuID AND menu_role.IsDelete = 0 AND menu.IsDelete =0 AND menu.Flag =0 AND menu_role.RoleID =1 Order by menu.MenuID ASC [ RunTime:0.002001s ]
+[ error ] [8]未定义数组下标: 4[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 5[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 6[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 7[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 21[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 27[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 28[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 29[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 24[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 25[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 3[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 22[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:22:24+08:00 ] 127.0.0.1 127.0.0.1 GET /static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map
+[ log ] lnbei.com/static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map [运行时间：0.068004s][吞吐率：14.71req/s] [内存消耗：1,523.02kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'components',
+    2 => 'bootstrap-datepicker',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:22:24+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Menu/index/
+[ log ] lnbei.com/index/Menu/index/ [运行时间：0.102005s][吞吐率：9.80req/s] [内存消耗：2,277.52kb] [文件加载：42]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->index[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\menu\menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:22:24+08:00 ] 127.0.0.1 127.0.0.1 POST /index/menu/ajaxgetmenu.html
+[ log ] lnbei.com/index/menu/ajaxgetmenu.html [运行时间：0.172010s][吞吐率：5.81req/s] [内存消耗：3,292.63kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'menu',
+    2 => 'ajaxgetmenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '27',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'RoleID' => '1',
+  'id' => '2',
+  'num' => '10',
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->ajaxGetMenu[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_menu` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ce_menu`.* FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 ORDER BY ID desc LIMIT 0,10 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:22:24+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.230013s][吞吐率：4.35req/s] [内存消耗：3,240.59kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '25',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 0 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:24:01+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.088005s][吞吐率：11.36req/s] [内存消耗：2,621.88kb] [文件加载：48]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\index.html [ array (
+  0 => 'menuhtml',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT DISTINCT 	menu.MenuID AS menuID, 	menu.MenuName AS MenuName, 	menu.ParentID AS ParentID, 	menu.Flag AS Flag, 	menu.URL AS URL FROM 	ce_menu AS menu, 	ce_menu_role AS menu_role WHERE 	menu.MenuID = menu_role.MenuID AND menu_role.IsDelete = 0 AND menu.IsDelete =0 AND menu.Flag =0 AND menu_role.RoleID =1 Order by menu.MenuID ASC [ RunTime:0.006000s ]
+[ error ] [8]未定义数组下标: 4[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 5[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 6[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 7[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 21[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 27[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 28[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 29[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 24[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 25[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 3[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 22[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:24:01+08:00 ] 127.0.0.1 127.0.0.1 GET /static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map
+[ log ] lnbei.com/static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map [运行时间：0.065004s][吞吐率：15.38req/s] [内存消耗：1,523.02kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'components',
+    2 => 'bootstrap-datepicker',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:24:01+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Menu/index/
+[ log ] lnbei.com/index/Menu/index/ [运行时间：0.112006s][吞吐率：8.93req/s] [内存消耗：2,277.52kb] [文件加载：42]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->index[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\menu\menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:24:01+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.126007s][吞吐率：7.94req/s] [内存消耗：3,240.59kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '25',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 0 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:24:01+08:00 ] 127.0.0.1 127.0.0.1 POST /index/menu/ajaxgetmenu.html
+[ log ] lnbei.com/index/menu/ajaxgetmenu.html [运行时间：0.220012s][吞吐率：4.55req/s] [内存消耗：3,292.63kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'menu',
+    2 => 'ajaxgetmenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '27',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'RoleID' => '1',
+  'id' => '2',
+  'num' => '10',
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->ajaxGetMenu[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_menu` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ce_menu`.* FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 ORDER BY ID desc LIMIT 0,10 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:26:14+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.074004s][吞吐率：13.51req/s] [内存消耗：2,621.88kb] [文件加载：48]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\index.html [ array (
+  0 => 'menuhtml',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT DISTINCT 	menu.MenuID AS menuID, 	menu.MenuName AS MenuName, 	menu.ParentID AS ParentID, 	menu.Flag AS Flag, 	menu.URL AS URL FROM 	ce_menu AS menu, 	ce_menu_role AS menu_role WHERE 	menu.MenuID = menu_role.MenuID AND menu_role.IsDelete = 0 AND menu.IsDelete =0 AND menu.Flag =0 AND menu_role.RoleID =1 Order by menu.MenuID ASC [ RunTime:0.005001s ]
+[ error ] [8]未定义数组下标: 4[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 5[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 6[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 7[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 21[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 27[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 28[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 29[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 24[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 25[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 3[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 22[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:26:14+08:00 ] 127.0.0.1 127.0.0.1 GET /static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map
+[ log ] lnbei.com/static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：1,523.02kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'components',
+    2 => 'bootstrap-datepicker',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:26:14+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Menu/index/
+[ log ] lnbei.com/index/Menu/index/ [运行时间：0.105007s][吞吐率：9.52req/s] [内存消耗：2,277.52kb] [文件加载：42]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->index[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\menu\menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:26:15+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.096005s][吞吐率：10.42req/s] [内存消耗：3,240.59kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '25',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 0 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:26:15+08:00 ] 127.0.0.1 127.0.0.1 POST /index/menu/ajaxgetmenu.html
+[ log ] lnbei.com/index/menu/ajaxgetmenu.html [运行时间：0.215012s][吞吐率：4.65req/s] [内存消耗：3,292.64kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'menu',
+    2 => 'ajaxgetmenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+  'content-length' => '28',
+)
+[ info ] [ PARAM ] array (
+  'RoleID' => '1',
+  'id' => '2',
+  'num' => '100',
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->ajaxGetMenu[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_menu` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ce_menu`.* FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 ORDER BY ID desc LIMIT 0,100 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:30:00+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.100005s][吞吐率：10.00req/s] [内存消耗：2,621.88kb] [文件加载：48]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\index.html [ array (
+  0 => 'menuhtml',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT DISTINCT 	menu.MenuID AS menuID, 	menu.MenuName AS MenuName, 	menu.ParentID AS ParentID, 	menu.Flag AS Flag, 	menu.URL AS URL FROM 	ce_menu AS menu, 	ce_menu_role AS menu_role WHERE 	menu.MenuID = menu_role.MenuID AND menu_role.IsDelete = 0 AND menu.IsDelete =0 AND menu.Flag =0 AND menu_role.RoleID =1 Order by menu.MenuID ASC [ RunTime:0.001000s ]
+[ error ] [8]未定义数组下标: 4[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 5[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 6[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 7[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 21[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 27[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 28[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 29[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 24[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 25[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 3[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 22[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:30:00+08:00 ] 127.0.0.1 127.0.0.1 GET /static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map
+[ log ] lnbei.com/static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：1,523.02kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'components',
+    2 => 'bootstrap-datepicker',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:30:00+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Menu/index/
+[ log ] lnbei.com/index/Menu/index/ [运行时间：0.084004s][吞吐率：11.90req/s] [内存消耗：2,000.44kb] [文件加载：40]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->index[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\menu\menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:30:00+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.120007s][吞吐率：8.33req/s] [内存消耗：3,240.59kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '25',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 0 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:30:00+08:00 ] 127.0.0.1 127.0.0.1 POST /index/menu/ajaxgetmenu.html
+[ log ] lnbei.com/index/menu/ajaxgetmenu.html [运行时间：0.216012s][吞吐率：4.63req/s] [内存消耗：3,292.64kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'menu',
+    2 => 'ajaxgetmenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'RoleID' => '1',
+  'id' => '2',
+  'num' => '100',
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->ajaxGetMenu[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_menu` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `ce_menu`.* FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 ORDER BY ID asc LIMIT 0,100 [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:32:59+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.093005s][吞吐率：10.75req/s] [内存消耗：2,621.88kb] [文件加载：48]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\index.html [ array (
+  0 => 'menuhtml',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT DISTINCT 	menu.MenuID AS menuID, 	menu.MenuName AS MenuName, 	menu.ParentID AS ParentID, 	menu.Flag AS Flag, 	menu.URL AS URL FROM 	ce_menu AS menu, 	ce_menu_role AS menu_role WHERE 	menu.MenuID = menu_role.MenuID AND menu_role.IsDelete = 0 AND menu.IsDelete =0 AND menu.Flag =0 AND menu_role.RoleID =1 Order by menu.MenuID ASC [ RunTime:0.003000s ]
+[ error ] [8]未定义数组下标: 4[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 5[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 6[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 7[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 21[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 27[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 28[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 29[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 24[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 25[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 3[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 22[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:32:59+08:00 ] 127.0.0.1 127.0.0.1 GET /static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map
+[ log ] lnbei.com/static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map [运行时间：0.115007s][吞吐率：8.70req/s] [内存消耗：1,523.02kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'components',
+    2 => 'bootstrap-datepicker',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:32:59+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Menu/index/
+[ log ] lnbei.com/index/Menu/index/ [运行时间：0.122007s][吞吐率：8.20req/s] [内存消耗：2,000.44kb] [文件加载：40]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->index[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\menu\menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:33:00+08:00 ] 127.0.0.1 127.0.0.1 POST /index/menu/ajaxgetmenu.html
+[ log ] lnbei.com/index/menu/ajaxgetmenu.html [运行时间：0.167010s][吞吐率：5.99req/s] [内存消耗：3,292.64kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'menu',
+    2 => 'ajaxgetmenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'RoleID' => '1',
+  'id' => '2',
+  'num' => '100',
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->ajaxGetMenu[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_menu` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `ce_menu`.* FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 ORDER BY ID asc LIMIT 0,100 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:33:00+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.219013s][吞吐率：4.57req/s] [内存消耗：3,240.59kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '25',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 0 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:33:02+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] lnbei.com/ [运行时间：0.091005s][吞吐率：10.99req/s] [内存消耗：2,621.88kb] [文件加载：48]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\f\phpace\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\index\index.html [ array (
+  0 => 'menuhtml',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT DISTINCT 	menu.MenuID AS menuID, 	menu.MenuName AS MenuName, 	menu.ParentID AS ParentID, 	menu.Flag AS Flag, 	menu.URL AS URL FROM 	ce_menu AS menu, 	ce_menu_role AS menu_role WHERE 	menu.MenuID = menu_role.MenuID AND menu_role.IsDelete = 0 AND menu.IsDelete =0 AND menu.Flag =0 AND menu_role.RoleID =1 Order by menu.MenuID ASC [ RunTime:0.003000s ]
+[ error ] [8]未定义数组下标: 4[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 5[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 6[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 7[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 21[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 27[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 28[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 29[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 24[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 25[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 3[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+[ error ] [8]未定义数组下标: 22[E:\f\phpace\extend\lib\html\BuildMenuHtml.php:34]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:33:03+08:00 ] 127.0.0.1 127.0.0.1 GET /static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map
+[ log ] lnbei.com/static/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css.map [运行时间：0.081004s][吞吐率：12.35req/s] [内存消耗：1,523.02kb] [文件加载：33]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'components',
+    2 => 'bootstrap-datepicker',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:33:03+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Menu/index/
+[ log ] lnbei.com/index/Menu/index/ [运行时间：0.102006s][吞吐率：9.80req/s] [内存消耗：2,000.44kb] [文件加载：40]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->index[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ VIEW ] E:\f\phpace\public/../application/index\view\menu\menu.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-04-25T16:33:03+08:00 ] 127.0.0.1 127.0.0.1 POST /Index/Department/ajaxGetDepart
+[ log ] lnbei.com/Index/Department/ajaxGetDepart [运行时间：0.120007s][吞吐率：8.33req/s] [内存消耗：3,240.59kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Index',
+    1 => 'Department',
+    2 => 'ajaxGetDepart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '25',
+  'accept' => 'text/plain, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'otherParam' => 'zTreeAsyncTest',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Department->ajaxGetDepart[ E:\f\phpace\application\index\controller\Department.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_department` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 0 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `ce_department` WHERE  `ParentID` = 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-04-25T16:33:03+08:00 ] 127.0.0.1 127.0.0.1 POST /index/menu/ajaxgetmenu.html
+[ log ] lnbei.com/index/menu/ajaxgetmenu.html [运行时间：0.215013s][吞吐率：4.65req/s] [内存消耗：3,292.64kb] [文件加载：47]
+[ info ] [ LANG ] E:\f\phpace\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'menu',
+    2 => 'ajaxgetmenu',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'lnbei.com',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://lnbei.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://lnbei.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=fjc4ba323lu9aauom1mv7hil24',
+)
+[ info ] [ PARAM ] array (
+  'RoleID' => '1',
+  'id' => '2',
+  'num' => '100',
+  'page' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => 'sss',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Menu->ajaxGetMenu[ E:\f\phpace\application\index\controller\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=phpce;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ce_menu` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ce_menu`.* FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 ORDER BY ID asc LIMIT 0,100 [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `ce_menu` INNER JOIN `ce_menu_role` `ce_menu_role` ON `ce_menu`.`MenuID`=`ce_menu_role`.`MenuID` WHERE  `ce_menu`.`IsDelete` = 0 LIMIT 1 [ RunTime:0.003001s ]
+
+---------------------------------------------------------------

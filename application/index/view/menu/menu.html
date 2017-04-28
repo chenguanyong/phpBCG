@@ -1,9 +1,6 @@
 
-
-
-
-
 <title>菜单管理</title>
+<link rel="stylesheet" href="{$Think.config.__PUBLIC__}/js/ztree/css/zTreeStyle/zTreeStyle.css" />	
 <div class="row"  >
   <div class="col-xs-2" style="margin:0px;padding-right:2px;">
       <div class="widget-box" style="margin:0px;">
@@ -13,7 +10,9 @@
 
         <div class="widget-body" style="font-size:10px;  overflow:auto">
           <div class="widget-main" style="font-size:10px;overflow:auto">
-            <div id="usertreeview" class="tree" style="font-size:8px; width:100%; sScrollX:auto;sScrollY:auto"></div>
+            <div  class="tree" style="font-size:8px; width:100%; sScrollX:auto;sScrollY:auto">
+            	<ul id="departtreeview" class="ztree" style="font-size:8px; width:100%; max-height:300px; sScrollX:auto;sScrollY:auto"></ul>
+            </div>
           </div>
         </div>
       </div>
@@ -23,10 +22,9 @@
 	<div class="row">
 	      <div class="col-xs-5">
         <div class="clearfix">
-          <button class="btn btn-sm btn-primary" data-type='3' data-toggle="modal" data-target="#myModal" data-whatever="修改用户">修改</button>
-          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='1' data-whatever="新增用户">添加</button> 
-          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='2' data-whatever="删除用户">删除</button> 
-          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="查看用户信息">查看</button>
+          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='1' data-whatever="修改用户" data-action="doEdit">修改</button>
+          <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" data-type='1' data-whatever="新增用户" data-action="doAdd">添加</button> 
+          <button class="btn btn-sm btn-primary"  data-type='1' data-whatever="删除用户" data-action="doDele">删除</button> 
         </div>
       </div>
 	</div>									
@@ -34,7 +32,7 @@
 	<table id="simple-table" class="table  table-bordered table-hover">
 		<thead>
 			<tr>
-				<th class="detail-col"><label class="pos-rel"><input type="checkbox" class="ace"><span class="lbl"></span></label></th>
+				<th class="detail-col"><label class="pos-rel"><input type="checkbox" class="ace" id="allcheckbox"><span class="lbl"></span></label></th>
 				<th>菜单</th>
 				<th>URL</th>
 				<th>样式</th>
@@ -52,7 +50,7 @@
 </div><!-- /.row -->
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-whatever="cheng" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
+ 测试
 </button>
 <!-- ff -->
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -66,100 +64,79 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
-								<form class="form-horizontal" role="form">
+								<form class="form-horizontal" id="submitform" role="form">
 									<!-- #section:elements.form -->
 									<div class="form-group">
-										<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> 节点: </label>
+										<label class="col-sm-3 control-label no-padding-right" > 节点: </label>
 
-										<div class="col-sm-7">
-															<select class="form-control" id="form-field-select-1">
-																<option value=""></option>
-																<option value="AL">Alabama</option>
-																<option value="AK">Alaska</option>
-																<option value="AZ">Arizona</option>
-																<option value="AR">Arkansas</option>
-																<option value="CA">California</option>
-																<option value="CO">Colorado</option>
-																<option value="CT">Connecticut</option>
-																<option value="DE">Delaware</option>
-																<option value="FL">Florida</option>
-																<option value="GA">Georgia</option>
-																<option value="HI">Hawaii</option>
-																<option value="ID">Idaho</option>
-																<option value="IL">Illinois</option>
-																<option value="IN">Indiana</option>
-																<option value="IA">Iowa</option>
-																<option value="KS">Kansas</option>
-																<option value="KY">Kentucky</option>
-																<option value="LA">Louisiana</option>
-																<option value="ME">Maine</option>
-																<option value="MD">Maryland</option>
-																<option value="MA">Massachusetts</option>
-																<option value="MI">Michigan</option>
-																<option value="MN">Minnesota</option>
-																<option value="MS">Mississippi</option>
-																<option value="MO">Missouri</option>
-																<option value="MT">Montana</option>
-																<option value="NE">Nebraska</option>
-																<option value="NV">Nevada</option>
-																<option value="NH">New Hampshire</option>
-																<option value="NJ">New Jersey</option>
-																<option value="NM">New Mexico</option>
-																<option value="NY">New York</option>
-																<option value="NC">North Carolina</option>
-																<option value="ND">North Dakota</option>
-																<option value="OH">Ohio</option>
-																<option value="OK">Oklahoma</option>
-																<option value="OR">Oregon</option>
-																<option value="PA">Pennsylvania</option>
-																<option value="RI">Rhode Island</option>
-																<option value="SC">South Carolina</option>
-																<option value="SD">South Dakota</option>
-																<option value="TN">Tennessee</option>
-																<option value="TX">Texas</option>
-																<option value="UT">Utah</option>
-																<option value="VT">Vermont</option>
-																<option value="VA">Virginia</option>
-																<option value="WA">Washington</option>
-																<option value="WV">West Virginia</option>
-																<option value="WI">Wisconsin</option>
-																<option value="WY">Wyoming</option>
-															</select>
+										<div for="node" class="col-sm-8">
+												<input type="text" id="node" name="node"  placeholder="请输入节点" class="form-control" />
 										</div>
 									</div>									
 									<div class="form-group">
-										<label class="col-sm-4 control-label no-padding-right" for="form-field-1"> 菜单名: </label>
+										<label class="col-sm-3 control-label no-padding-right" > 菜单名: </label>
 
-										<div class="col-sm-7">
-											<input type="text" id="form-field-1" placeholder="Username" class="form-control" />
+										<div for="MenuName" class="col-sm-8">
+											<input type="text" id="MenuName" name="MenuName" placeholder="Username" class="form-control" />
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-sm-4 control-label no-padding-right" for="form-field-1-1"> 备注: </label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> 样式: </label>
 
-										<div class="col-sm-7">
-											<input type="text" id="form-field-1-1" placeholder="Text Field" class="form-control" />
+										<div for="css" class="col-sm-8">
+											<input type="text" id="css" name="css" placeholder="Text Field" class="form-control" />
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-sm-4 control-label no-padding-right" for="form-field-1-1"> 状态: </label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> URL: </label>
 
-										<div class="col-sm-7">
+										<div for="URL" class="col-sm-8">
+											<input type="text" id="URL" name="URL" placeholder="Text Field" class="form-control" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> 备注: </label>
+
+										<div for="bz"  class="col-sm-8">
+											<input type="text" id="bz" name="bz" placeholder="Text Field" class="form-control" />
+										</div>
+									</div>																			
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> 状态: </label>
+
+										<div for="IsDelete" class="col-sm-8">
 													<label>
-														<input name="switch-field-1" class="ace ace-switch ace-switch-4" type="checkbox">
+														<input id="IsDelete" name="IsDelete" class="ace ace-switch ace-switch-4" type="checkbox">
 														<span class="lbl"></span>
 													</label>
 										</div>
 									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> 是否菜单: </label>
+
+										<div for="Flag" class="col-sm-8">
+													<label>
+														<input id="Flag" name="Flag" class="ace ace-switch ace-switch-4" type="checkbox">
+														<span class="lbl"></span>
+													</label>
+										</div>
+									</div>
+									      <div class="modal-footer">
+        										<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+       										    <button type="submit" id="submitbutton" class="btn btn-primary">确定</button>
+      									  </div>
 								</form>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-        <button type="button" class="btn btn-primary">确定</button>
-      </div>
     </div>
   </div>
+</div>
+</div>
+<div id="dialog" title="提示信息" style='display:none'>
+  <p>确定要删除这一行！</p>
+</div>
+<div id="dialogs" title="提示信息" style='display:none'>
+  <p>请先选中一行！</p>
 </div>
 <script type="text/javascript">
 (function ($){
@@ -167,12 +144,116 @@
 	$('#myModal').on('show.bs.modal', function (event) {
 		  var button = $(event.relatedTarget) // Button that triggered the modal
 		  var recipient = button.data('whatever') // Extract info from data-* attributes
-		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-		  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
 		  var modal = $(this)
 		  modal.find('.modal-title').text(recipient)
+		  var type = button.attr("data-type");
+		  var action = button.attr("data-action");
+		  if(type == "1"){
+			  if(action == "doEdit"){
+				 var length = $("tbody tr td :checked").toArray().length;
+				 if(length == 0){$('#myModal').modal('hide');
+				 	alert("请选择一行!");
+				 	return false;
+				 }else{
+					var id = $("tbody tr td :checked").parent().parent().parent().data("id");
+					var td = $("tbody tr[data-id="+id+"]").children("td");//.eq(1).text();
+					$("#node").val("dingji");
+					$("#MenuName").val(td.eq(1).text());
+					$("#css").val(td.eq(3).text());
+					$("#URL").val(td.eq(2).text());
+					$("#submitbutton").attr("data-type",2);
+					$("#submitbutton").attr("data-id",id);
+				 }
+			  }else if(action == "doAdd"){
+				  //添加节点
+				  $("#node").val("dingji");
+				  $("#submitbutton").attr("data-type",1);
+			  }
+			  
+		  }else{
+				var id = button.parent().parent().data("id");
+				
+				var td = $("tbody tr[data-id="+id+"]").children("td");//.eq(1).text();
+			  if(action == "doEdit"){
+						$("#node").val("dingji");
+						$("#MenuName").val(td.eq(1).text());
+						$("#css").val(td.eq(3).text());
+						$("#URL").val(td.eq(2).text());
+						 $("#submitbutton").attr("data-type",2);
+						 $("#submitbutton").attr("data-id",id);
+					 
+				  }else if(action == "doAdd"){
+					  //添加节点
+					  $("#node").val(td.eq(1).text());
+					  $("#submitbutton").attr("data-type",1);
+				  }
+			  
+		  }
 		})
 
+		$(document).on("click","[data-action=doDele]",function(event){
+			  var type = $(this).attr("data-type");
+			  var id = 0;
+			if(type == 1){
+				var length = $("tbody tr td :checked").toArray().length;
+				if(length == 0){
+	            $("#dialogs").dialog(
+	                    {
+	                        modal : true,
+	                        dialogClass : "no-close",
+	                        buttons : [
+	                            {
+	                                text : "OK",
+	                                click : function ()
+	                                {
+	                                    $(this).dialog("close");
+	                                   
+	                                }
+	                            }
+	                        ]
+	                    }
+	                    );
+	            return false;
+			}else{
+			 $("tbody tr td :checked").parent().parent().parent().each(function(){
+					
+					id = $(this).attr("data-id")+"_";
+				});
+			}
+				}else{
+					 id = $(this).parent().parent().data("id");
+				}
+            $("#dialog").dialog(
+                    {
+                        modal : true,
+                        dialogClass : "no-close",
+                        buttons : [
+                            {
+                                text : "关闭",
+                                click : function ()
+                                {
+                                    $(this).dialog("close");
+                                }
+                            },
+                            {
+                                text : "确定",
+                                "class" : "btn btn-primary btn-minier",
+                                click : function ()
+                                {
+                                    $(this).dialog("close");
+                                    $.post("{:url('Menu/dele')}",{id:id},function (data){
+                                    	if(data.code="1"){
+                                    		window.location = "{:url('Menu/index')}";
+                                    	}else{
+                                    		alert(data.msg);
+                                    	}
+                                    },"json");
+                                }
+                            }
+                        ]
+                    }
+                    );
+		});
   //鏋勫缓琛ㄦ牸
 	  function BuildTr(obj){
 			var tbody = document.getElementById(obj.id);
@@ -231,25 +312,19 @@
 			,{"data_id":4,"data_pid":0}			
 			],
 	defaultcolumn:
-		[{"title":'<a href="javascript" class="btn btn-info btn-xs"><i class="fa fa-search-plus"></i> 查看</a><a href="javascript" class="btn btn-success btn-xs"><i class="fa fa-edit"></i> 修改</a><a href="javascript" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> 删除</a>',"css":'detail-col'}
+		[{"title":'<a data-toggle="modal" data-target="#myModal"  data-action="doAdd" data-whatever="添加菜单" class="btn btn-info btn-xs"><i class="fa fa-search-plus"></i>添加</a><a data-toggle="modal" data-target="#myModal" data-action="doEdit" data-whatever="修改菜单" class="btn btn-success btn-xs"><i class="fa fa-edit"></i> 修改</a><a data-action="doDele" data-whatever="删除菜单" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> 删除</a>',"css":'detail-col'}
 	],
 	defaultBefCol:
-		[{"title":'<label class="pos-rel"><input type="checkbox" class="ace"><span class="lbl"></span></label>',"css":'detail-col'},{"title":"chen44","css":'fdd'}
+		[{"title":'<label class="pos-rel"><input type="checkbox" class="ace"><span class="lbl"></span></label>',"css":'detail-col'}
 	],
 		}
-	BuildTr(ff);
+	
 	//	鍒濆鍖栬〃鏍�
 
-	$('.table.table-bordered.table-hover').treegrid({
-		treeColumn:'1',initialState: 'collapsed',
-		expanderExpandedClass: 'ace-icon fa fa-home home-icon',
-		expanderCollapsedClass: 'glyphicon glyphicon-cloud'
-	    }
-	); 
+
 	layui.use(['laypage', 'layer'], function(){
 		  var laypage = layui.laypage
 		  ,layer = layui.layer;
-		  
 		  laypage({
 		    cont: 'page'
 		    ,pages: 100 //总页数
@@ -259,6 +334,137 @@
 		    ,skin: '#1E9FFF'
 		  });
 	});
+	var input ={};
+	$("#submitbutton").on("click",function(){
+		$("#myModal").find("input").each(function(){
+			eval("input."+$(this).attr("name")+"='"+$(this).val()+"';");
+		});
+		input.id=$("#submitbutton").attr("data-id");
+		
+	});
+	$.validator.setDefaults({
+	    submitHandler: function() {
+	      var type = $("#submitbutton").attr("data-type");
+	      var url="";
+	      if(type == 1){
+	    	  url = "{:url('Menu/add')}";
+	      }else{
+	    	  url = "{:url('Menu/update')}";
+	      }
+	      $.post(url,input,function(data){
+	    	  if(data.code==1){
+	    		  window.loction="{:url('Menu/index')}";
+	    	  }else{
+	    		  alert(data.msg);
+	    	  }
+	    	  
+	      },"json");
+	    }
+	});
+	$().ready(function() {
+	// 在键盘按下并释放及提交后验证提交表单
+	  $("#submitform").validate({
+		    rules: {
+		      MenuName: {
+		        required: true,
+		        minlength: 2
+		      },
+		      css: {
+		        required: true,
+		        minlength: 5
+		      },
+		      URL: {
+		        required: true,
+		        minlength: 5
+		      },
+		      bz: {
+		        required: true,
+		        minlength: 2
+		      }
+		    },
+		    messages: {
+		    	MenuName: {
+		        required: "请输入用户名",
+		        minlength: "用户名必需由两个字母组成"
+		      },
+		      css: {
+		        required: "请输入密码",
+		        minlength: "密码长度不能小于 5 个字母"
+		      },
+		      URL: "请输入一个正确的邮箱",
+		      bz: "请接受我们的声明"
+		    }
+		});
+	});
+	$("#allcheckbox").on("click",function(){
+		
+		$("#gh").find("input").click();
+	});
+	$("#simple-table tbody tr td input[type=checkbox]").on("click",function(){
+		var th_checked = this.checked;
+		
+		if(th_checked){
+			$(this).parent().parent().parent().css("background-color","#f0f0f0");
+		}else{
+			$(this).parent().parent().parent().css("background-color","#ffff");
+		}
+	});	
+	function zTreeOnCheck(event, treeId, treeNode) {
+	    //alert(treeNode.tId + ", " + treeNode.name + "," + treeNode.checked);
+		var treeObj = $.fn.zTree.getZTreeObj("ztree");
+		treeObj.checkAllNodes(false);
+	    if(treeNode.checked){
+	    	treeNode.checked = false;
+	    }else{
+	    	treeNode.checked = true;
+	    }
+	}
+	var widgetsetting = {
+			edit: {
+				enable: true,
+				showRemoveBtn: false,
+				showRenameBtn: false,
+				drag: {
+					isCopy: false,
+					isMove: true,
+					prev: true,
+					next: true,
+					inner: false
+				}
+			},
+			check: {
+				enable: false
+			},
+			callback: {
+				onCheck: zTreeOnCheck
+			},
+			async: {
+				enable: true,
+				url:"../Index/Department/ajaxGetDepart",
+				autoParam:["id", "name=n", "level=lv"],
+				otherParam:{"otherParam":"zTreeAsyncTest"}
+		
+			}
+		};
+	function createTable(id){
+		
+		$.post("{:url('ajaxGetMenu')}",{RoleID:1,id:id,num:100,page:1},function(data){
+			ff.data = data.data;
+			ff.parentchild = data.datapc;
+			BuildTr(ff);
+			$('.table.table-bordered.table-hover').treegrid({
+				treeColumn:'1',initialState: 'collapsed',
+				expanderExpandedClass: 'ace-icon fa fa-home home-icon',
+				expanderCollapsedClass: 'glyphicon glyphicon-cloud'
+			    }
+			); 
+		},"json"); 
+	}
+	$(document).ready(function(){
+		$.fn.zTree.init($("#departtreeview"), widgetsetting);
+		createTable(0);
+	});
+	
 })(jQuery);
   
 

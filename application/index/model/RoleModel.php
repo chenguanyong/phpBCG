@@ -5,88 +5,53 @@ use think\Session;
 class RoleModel extends Model
 {
     protected  $table = 'ce_role';
-    public function initialize(){
-    
-        parent::initialize();
-    }
-    
-    public function getRole($page,$rownum){
-        $start = ($page-1) * $rownum;
-        Session::set('role_page',$page);
-        Session::set('role_row',$rownum);
-      $result = $this
-        ->limit($start, $rownum)
-        ->order('id', 'desc')
-        ->select();
-       $count = $this->count('id');
+    public function getRole($where,$page,$rownum){
+       $count = $this->where($where)->count('ID');
        $back_result = array();
        $i = 0;
+       $result = $this->where($where)->page($page,$rownum)->select();
        foreach ($result as $result_row){
            
-           $back_result[$i]['角色ID'] = $result_row['RoleID'];
-           $back_result[$i]['角色名'] = $result_row['RoleName'];
-           $back_result[$i]['是否删除'] = $result_row['IsDelete'];
-           $back_result[$i]['添加时间'] = $result_row['DatetimeCreated'];
-           $back_result[$i]['更新时间'] = $result_row['DatetimeUpdated'];
+           $back_result[$i]['ID'] = $result_row['RoleID'];
+           $back_result[$i]['RoleName'] = $result_row['RoleName'];
+           $back_result[$i]['IsDelete'] = $result_row['IsDelete'];
+           $back_result[$i]['DatetimeCreated'] = $result_row['DatetimeCreated'];
+           $back_result[$i]['DatetimeUpdated'] = $result_row['DatetimeUpdated'];
+           $back_result[$i]['Css'] = $result_row['Css'];
            $i++;
        }
-       
-       
-        $gg = array('page'=>$page,'total'=> ceil($count/$rownum),'records'=>$count,'rows'=>$back_result);
-       //var_dump($result);
-      if($result == null){
-          
-          return false;
-      }
-      return $gg;
+      return ['data'=> $back_result,'length' => $count];
       
     }
     public function  addRole($Roledata){
         
-
         $role = $this->where("RoleName",$Roledata['RoleName'])
         ->find();
         if($role != null){
-            
             return null;
         }
-        //var_dump($role);
-        //exit;
         $id = $this->Max('ID');
         $id++;
         $Roledata['RoleID'] = $id;
         $Roledata['DatetimeCreated']=date('Y-m-d H:i:s', time()); 
         $Roledata['DatetimeUpdated']=date('Y-m-d H:i:s', time()); 
         $result = $this->save($Roledata);
-        
-        return $result === false ?false:true;
+        return $result;
         
     }
     public function deleRole($RoleID){
-       $page = Session::get('role_page');
-       $rownum = Session::get('role_row');
-       $start = ($page-1) * $rownum;
-
-       $result = $this
-       ->limit($start, $rownum)
-       ->order('id', 'desc')
-       ->select();
-       $RoleID = $RoleID-1;
-       $id = $result[$RoleID]['ID'];
-       //echo $id;
-      return   $this -> save(['IsDelete'=>1],['ID'=>$id])===false?false:true;
         
+      return $this->save(['IsDelete'=>1],['ID'=>$RoleID]);
     }
-    public function updateRole($Roledata){
+    public function updateRole($Roledata,$roleID){
 
         $role = $this->where("RoleName",$Roledata['RoleName'])
-        ->select();
-        if(count($role) > 1){
-        
+        ->find();
+        if($role == null){
             return null;
         }
         $Roledata['DatetimeUpdated']=date('Y-m-d H:i:s', time());
-        return   $this -> save($Roledata,['RoleID'=>$Roledata['RoleID']])===false?false:true;
+        return $this->save($Roledata,['RoleID'=>$roleID]);
     }
 }
 

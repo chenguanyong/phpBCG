@@ -98,14 +98,23 @@ class Menu extends Base
     public function update(){
         if(request()->isAjax()){
             $key = input("post.");
-            if(is_array($key)){
+            //var_dump($key);
+            if(!is_array($key)){
                 return json_encode(array("code"=>0,"msg"=>"参数无效"),JSON_UNESCAPED_UNICODE);
+            }
+            if(isset($key["IsDelete"])){
+                
+                $key["IsDelete"] = $key["IsDelete"] == "on"?1:0;
+            }
+            if(isset($key["IsDelete"])){
+            
+                $key["Flag"] = $key["Flag"] == "on"?1:0;
             }
             $menu = new MenuModel();
             $id= 0;
-            $id = $key['ID'];
-            unset($key['ID']);
-            $result = $menu->updateMenu($key);//删除菜单
+            $id = $key['id'];
+            unset($key['id']);
+            $result = $menu->updateMenu($key,$id);//删除菜单
             if($result == null){
                 return json_encode(array("code"=>0,"msg"=>"添加菜单失败"),JSON_UNESCAPED_UNICODE);
             }else{
@@ -126,15 +135,15 @@ class Menu extends Base
           if($roleID == null){
               return json_encode(array("code"=>0,"msg"=>"获取角色ID失败"),JSON_UNESCAPED_UNICODE);
           } 
-          $id = input('get.id');
+          $id = input('id');
           if(!is_numeric($id)){
               return json_encode(array("code"=>0,"msg"=>"输入id无效"),JSON_UNESCAPED_UNICODE);
           }
-          $page = input('get.page');
+          $page = input('page');
           if(!is_numeric($page)){
               return json_encode(array("code"=>0,"msg"=>"输入页码无效"),JSON_UNESCAPED_UNICODE);
           }
-          $num = input('get.num');
+          $num = input('num');
           if(!is_numeric($num)){
               return json_encode(array("code"=>0,"msg"=>"输入页码容量无效"),JSON_UNESCAPED_UNICODE);
           }
@@ -154,7 +163,7 @@ class Menu extends Base
               $temp[]=array('title'=>$value['IsDelete'],'css'=>$value['css']);
               $data[]=$temp;
               $datapctemp = array("data_id"=>$value['MenuID'],"data_pid"=>$value['ParentID']);
-              $datapc = $datapctemp; 
+              $datapc[] = $datapctemp; 
           }  
             return  json_encode(array("code"=>1,"msg"=>"成功","data"=>$data,"datapc"=>$datapc),JSON_UNESCAPED_UNICODE);
         }else{
@@ -174,7 +183,7 @@ class Menu extends Base
             if($roleID == null){
                 return json_encode(array("code"=>0,"msg"=>"获取角色ID失败"),JSON_UNESCAPED_UNICODE);
             }
-            $id = input('get.id');
+            $id = input('post.id');
             if(!is_numeric($id)){
                 return json_encode(array("code"=>0,"msg"=>"输入id无效"),JSON_UNESCAPED_UNICODE);
             }
