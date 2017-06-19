@@ -1,40 +1,24 @@
 <?php
-namespace app\common\controller;
-use think\Controller;
-class Index extends Controller
+namespace app\mall\controller;
+
+use app\member\controller\Base;
+use app\mall\model\OrderModel;
+use app\mall\model\ShopModel;
+
+class Index extends Base
 {
-    /**
-     * 普通请求
-     *
-     * */
-    //首页
-    public function index()
-    {  
-        return $this->fetch('index'); //$password;
+    public function index(){
+
+       return  $this->fetch('index');
     }
-    //添加页面
-    public function addPage(){
-        
-        
-    }
-    //删除页面
-    public function deletePage(){
-        
-    }
-    //更新页面
-    public function updatePage(){
-        
-    }
-    /**
-     * ajax请求
-     * 
-     * */
-    //添加ajax请求
-    public function ajaxAdd(){
-        //检查请求是否ajax
-        if(!Request::instance()->isAjax()){
-          return ;  
-        }
-        
+    public function shop(){
+        $shopid = input("get.id");
+         $shop = new ShopModel();
+         $shopInfo = $shop->getShopByID($shopid);
+         $this->assign("shopId",$shopid);
+         $this->assign("shopInfo",$shopInfo);
+       return $this->fetch("shop");
     }
 }
+
+?>

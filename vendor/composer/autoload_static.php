@@ -13,6 +13,7 @@ class ComposerStaticInit02a87e924ef2eaf76040ec1322ad8acc
     public static $prefixLengthsPsr4 = array (
         't' => 
         array (
+            'think\\mongo\\' => 12,
             'think\\composer\\' => 15,
             'think\\captcha\\' => 14,
             'think\\' => 6,
@@ -20,6 +21,10 @@ class ComposerStaticInit02a87e924ef2eaf76040ec1322ad8acc
     );
 
     public static $prefixDirsPsr4 = array (
+        'think\\mongo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/topthink/think-mongo/src',
+        ),
         'think\\composer\\' => 
         array (
             0 => __DIR__ . '/..' . '/topthink/think-installer/src',
@@ -30,7 +35,7 @@ class ComposerStaticInit02a87e924ef2eaf76040ec1322ad8acc
         ),
         'think\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/thinkphp/library/think',
+            0 => __DIR__ . '/..' . '/topthink/think-image/src',
         ),
     );
 

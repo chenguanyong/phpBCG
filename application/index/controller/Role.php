@@ -18,7 +18,7 @@ class Role extends Base
          return $this->fetch('index'); //$password;
     }
     /**
-     * [index 用户列表]
+     * [getRole 用户列表]
      * @return [type] [description]
      * @author
      */
@@ -61,7 +61,7 @@ class Role extends Base
                 }                
              }break;
              case 'edit':{
-                  $addrol_array = array('RoleName' =>$query_data['RoleName'],'IsDelete'=>$query_data['IsDelete']);
+                  $addrol_array = array('RoleName' =>$query_data['RoleName'],'Css' =>$query_data['css'],'IsDelete'=>$query_data['IsDelete']);
                   $result = $role ->updateRole($addrol_array,$query_data["id"]);
                   if($result == null){
                       return json_encode(array("code"=>0,"msg"=>"修改失败"),JSON_UNESCAPED_UNICODE);

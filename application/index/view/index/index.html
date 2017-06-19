@@ -15,7 +15,7 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Home</a>
+								<a href="#index/index/content">Home</a>
 							</li>
 						</ul><!-- /.breadcrumb -->
 
@@ -45,16 +45,16 @@
 								<li data-name="next" style="float:right"><a ><i class="glyphicon glyphicon-forward"></i></a></li>
 								<li data-name="close" style="float:right">
 <div class="btn-group roll-nav roll-right">
-                    <a class=" btn  btn-small  dropdown" style="border :0px; margin-top:-8px; padding-top:-2px; " data-toggle="dropdown" aria-expanded="false">关闭操作<span class="caret"></span>
+                    <a class=" btn  btn-small  dropdown" style="border :0px; margin-top:-8px; padding-top:-2px; " data-toggle="dropdown" aria-expanded="false">鍏抽棴鎿嶄綔<span class="caret"></span>
 
                     </a>
                     <ul role="menu" class="dropdown-menu dropdown-menu-right">
-                        <li class="J_tabShowActive"><a>定位当前选项卡</a>
+                        <li class="J_tabShowActive"><a>瀹氫綅褰撳墠閫夐」鍗�</a>
                         </li>
                         <li class="divider"></li>
-                        <li class="J_tabCloseAll"><a>关闭全部选项卡</a>
+                        <li class="J_tabCloseAll"><a>鍏抽棴鍏ㄩ儴閫夐」鍗�</a>
                         </li>
-                        <li class="J_tabCloseOther"><a>关闭其他选项卡</a>
+                        <li class="J_tabCloseOther"><a>鍏抽棴鍏朵粬閫夐」鍗�</a>
                         </li>
                     </ul>
                 </div>		
@@ -322,5 +322,18 @@
 			</div><!-- /.main-content -->	
 
 	
-{include file="public\foot" /}
+
 {include file="public\footer" /}
+<script>
+(function ($){
+	layui.use('layer', function(){
+		  var layer = layui.layer;
+		  
+		 // layer.msg($("#chen").attr("dref"));
+			//layer = layer;
+
+		  
+		});	
+	
+})(window.jQuery);
+</script>

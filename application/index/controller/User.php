@@ -72,9 +72,9 @@ class User extends Base
     }
     //用户中心
     public function userProfile(){
-        $view = new View();
         
-        return $view->fetch('profile');
+        
+        return $this->fetch('profile');
     }
     //时间线
     public function timeline(){

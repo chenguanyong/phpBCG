@@ -1,5 +1,5 @@
 <?php
-namespace app\admin\controller;
+namespace app\index\controller;
 use think\Controller;
 use think\File;
 use think\Request;
@@ -13,13 +13,34 @@ class Upload extends Controller
         $file = request()->file('file');
         $info = $file->move(ROOT_PATH . 'public' . DS . 'upload/image/adv');
         if($info){
-            $res['status']=1;
+            $res['code']=1;
+            $res['name']=$info->getInfo()['name'];
             $res['image_name']=$info->getSaveName();
+            $res['msg']="上传成功";
             return json($res);
 
         }else{
-            $res['status']=0;
-            $res['error_info']=$file->getError();
+            $res['code']=0;
+            $res['msg']=$file->getError();
+            return json($res);
+        }
+    }
+    /*
+     * 上传图片从管理图片
+     */
+    public function uploadSPImage(){
+        $file = request()->file('file');
+        $info = $file->move(ROOT_PATH . 'public' . DS . config("filePath")['spacePic']);
+        if($info){
+            $res['code']=1;
+            $res['name']=$info->getInfo()['name'];
+            $res['image_name']=$info->getSaveName();
+            $res['msg']="上传成功";
+            return json($res);
+    
+        }else{
+            $res['code']=0;
+            $res['msg']=$file->getError();
             return json($res);
         }
     }
@@ -32,7 +53,7 @@ class Upload extends Controller
         if($info){
             $res['src']="http://www.93admin.com/public/statisc/img/tong.jpg";
             $result=array('code'=>0,'data'=>$res,'msg'=>'上传成功');
-
+          
             return json($result);
 
         }else{
@@ -47,13 +68,14 @@ class Upload extends Controller
        $file = request()->file('file');
        $info = $file->move(ROOT_PATH . 'public' . DS . 'upload/image/article');
        if($info){
-           $res['status']=1;
+           $res['code']=1;
            $res['image_name']=$info->getSaveName();
-           $res['info'] = $info->getInfo();
+           $res['name']=$info->getInfo()['name'];
+           $res['msg']="上传成功";
            return json($res);
         }else{
-           $res['status']=0;
-           $res['error_info']=$file->getError();
+           $res['code']=0;
+           $res['msg']=$file->getError();
            return json($res);
         }
     }
@@ -63,14 +85,15 @@ class Upload extends Controller
         $info = $file->move(ROOT_PATH . 'public' . DS . 'upload/file/down');
         if($info){
 
-            $res['status']=1;
+            $res['code']=1;
             $res['file_name']=$info->getFilename();
             $res['file_path']="/upload/file/down/".$info->getSaveName();
+            $res['msg']="上传成功";
             return json($res);
 
         }else{
-            $res['status']=0;
-            $res['error_info']=$file->getError();
+            $res['code']=0;
+            $res['msg']=$file->getError();
             return json($res);
         }
     }

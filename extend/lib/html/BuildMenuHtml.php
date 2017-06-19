@@ -45,6 +45,37 @@ class BuildMenuHtml
         }
         return $tag;
     }
+    protected $dataArray = array();
+    //迭代
+    
+    protected  function iterations($data_array, $id){
+    
+        $int_count = count($data_array[$id]);
+        $data_arrays = $data_array[$id];
+    
+        for($i = 0; $i < $int_count; $i++){
+            
+            if(@$data_array[''.$data_arrays[$i][0]] == null){
+    
+                $tags = self::create_Array($data_arrays[$i],$g = '',true);
+            }
+            else {
+    
+                $tags = self::iteration($data_array, ''.$data_arrays[$i][0], '' );
+                $tags = self::create_Array($data_arrays[$i],$tags,false);
+            }
+    
+            
+        }
+       return null;
+    }
+    
+    public function getData( $id){
+        
+        self::iterations($this->data_array, $id);
+        return $this->dataArray;
+    }
+    
     //创建li字符串
   protected  function create_tag($data,$child = '',$flag = false){
         
@@ -59,6 +90,12 @@ class BuildMenuHtml
             return $strg = $strs . '<ul class="submenu">' .$child . '</ul></li>';
              
         }    
+    }
+    
+    //创建li字符串
+    protected  function create_Array($data,$child = '',$flag = false){
+    
+            $this->dataArray[]=$data;
     }
 }
 

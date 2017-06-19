@@ -6,6 +6,7 @@ use think\Request;
 use app\common\controller\Base;
 use lib\html\tag\input;
 use app\index\model\MenuModel;
+use lib\html\BuildMenuHtml;
 
 class Menu extends Base
 {
@@ -150,9 +151,10 @@ class Menu extends Base
           $menu = new MenuModel();
           $map = array("ce_menu.IsDelete"=>0);
           $result = $menu ->getMenuByID($roleID, $id, $map, $page, $num);
+
           if($result == null){
               return json_encode(array("code"=>0,"msg"=>"抱歉没有数据"),JSON_UNESCAPED_UNICODE);
-          } 
+          }
           $data = array();
           $datapc = array();
           foreach($result["data"] as $value){

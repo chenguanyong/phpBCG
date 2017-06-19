@@ -7,7 +7,6 @@ class Base extends Controller
         
         $UserID = CheckUser();
         if($UserID == false){
-        
             return $view->fetch('Login/login');
         }
     }

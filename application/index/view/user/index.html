@@ -70,7 +70,7 @@
             <th class="hidden-480">start_date</th>
 
             <th class="hidden-480">salary</th>
-<th class="hidden-480">salaryL</th>
+			<th class="hidden-480">salaryL</th>
             <th></th>
           </tr>
         </thead>
@@ -97,8 +97,8 @@
                   <tr>
                     <td class="width-15 active"><label class="pull-right"><font color="red">*</font>头像：</label></td>
 
-                    <td class="width-35">
-                      <input id="nameImage" name="photo" maxlength="255" class="input-xlarge" type="hidden" value="" />
+                    <td for="Image" class="width-35">
+                      <input id="nameImage" name="Image" maxlength="255" class="input-xlarge" type="hidden" value="" />
 
                       <ol id="nameImagePreview">
                         <li style="list-style:none;padding-top:5px;">无</li>
@@ -107,11 +107,11 @@
 
                     <td class="width-15"><label class="pull-right"><font color="red">*</font>归属公司:</label></td>
 
-                    <td class="width-35">
-                      <input id="companyId" name="company.id" class="form-control required" type="hidden" value="1" aria-required="true" />
+                    <td  class="width-35">
+                      <input id="companyId" name="CompanyID" class="form-control required" type="hidden" value="1" aria-required="true" />
 
                       <div class="input-group">
-                        <input id="companyName" name="company.name" readonly="readonly" type="text" value="河南省投资促进局" data-msg-required="" class="form-control required" style="" aria-required="true" /> <span class="input-group-btn"><button type="button" id="companyButton" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" data-whatever="#companyName"></button></span>
+                        <input id="companyName" name="companyname" readonly="readonly" type="text" value="河南省投资促进局" data-msg-required="" class="form-control required" style="" aria-required="true" /> <span class="input-group-btn"><button type="button" id="companyButton" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" data-whatever="#companyName"></button></span>
                       </div><label id="companyName-error" class="error" for="companyName" style="display:none"></label>
                     </td>
                   </tr>
@@ -120,52 +120,52 @@
                     <td class="active"><label class="pull-right"><font color="red">*</font>归属部门:</label></td>
 
                     <td>
-                      <input id="officeId" name="office.id" class="form-control required" type="hidden" value="1" aria-required="true" />
+                      <input id="officeId" name="DepartmentID" class="form-control required" type="hidden" value="1" aria-required="true" />
 
                       <div class="input-group">
                         <input id="officeName" name="office.name" readonly="readonly" type="text" value="河南省投资促进局" data-msg-required="" class="form-control required" style="" aria-required="true" /> <span class="input-group-btn"><button type="button" id="officeButton" class="btn btn-primary" data-toggle="modal" data-target="#myModal2" data-whatever="#officeName"></button></span>
                       </div><label id="officeName-error" class="error" for="officeName" style="display:none"></label>
                     </td>
 
-                    <td class="active"><label class="pull-right"><font color="red">*</font>工号:</label></td>
+                    <td  class="active"><label class="pull-right"><font color="red">*</font>工号:</label></td>
 
-                    <td><input id="no" name="no" class="form-control required" type="text" value="" maxlength="50" aria-required="true" /></td>
+                    <td for="UserID"><input id="no" name="UserID" class="form-control required" type="text" value="" maxlength="50" aria-required="true" /></td>
                   </tr>
 
                   <tr>
                     <td class="active"><label class="pull-right"><font color="red">*</font>姓名:</label></td>
 
-                    <td><input id="name" name="name" class="form-control required" type="text" value="" maxlength="50" aria-required="true" /></td>
+                    <td for="Names"><input id="name" name="Names" class="form-control required" type="text" value="" maxlength="50" aria-required="true" /></td>
 
                     <td class="active"><label class="pull-right"><font color="red">*</font>登录名:</label></td>
 
-                    <td><input id="oldLoginName" name="oldLoginName" type="hidden" value="" /> <input id="loginName" name="loginName" class="form-control required userName error" type="text" value="" maxlength="50" aria-required="true" aria-invalid="true" /><label id="loginName-error" class="error" for="loginName">这是必填字段</label></td>
+                    <td for="UserNames"><input id="UserName" name="UserNames" type="hidden" value="" /> <input id="loginName" name="UserName" class="form-control required userName error" type="text" value="" maxlength="50" aria-required="true" aria-invalid="true" /><label id="loginName-error" class="error" for="loginName">这是必填字段</label></td>
                   </tr>
 
                   <tr>
                     <td class="active"><label class="pull-right"><font color="red">*</font>密码:</label></td>
 
-                    <td><input id="newPassword" name="newPassword" type="password" value="" maxlength="50" minlength="3" class="form-control required" aria-required="true" /></td>
+                    <td for="PassWord"><input id="newPassword" name="PassWord" type="password" value="" maxlength="50" minlength="3" class="form-control required" aria-required="true" /></td>
 
                     <td class="active"><label class="pull-right"><font color="red">*</font>确认密码:</label></td>
 
-                    <td><input id="confirmNewPassword" name="confirmNewPassword" type="password" class="form-control required" value="" maxlength="50" minlength="3" equalto="#newPassword" aria-required="true" /></td>
+                    <td for="confirmNewPassword"><input id="confirmNewPassword" name="confirmNewPassword" type="password" class="form-control required" value="" maxlength="50" minlength="3" equalto="#newPassword" aria-required="true" /></td>
                   </tr>
 
                   <tr>
                     <td class="active"><label class="pull-right">邮箱:</label></td>
 
-                    <td><input id="email" name="email" class="form-control email" type="text" value="" maxlength="100" /></td>
+                    <td for="email"><input id="email" name="email" class="form-control email" type="text" value="" maxlength="100" /></td>
 
                     <td class="active"><label class="pull-right">电话:</label></td>
 
-                    <td><input id="phone" name="phone" class="form-control" type="text" value="" maxlength="100" /></td>
+                    <td for="phone"><input id="phone" name="phone" class="form-control" type="text" value="" maxlength="100" /></td>
                   </tr>
 
                   <tr>
                     <td class="active"><label class="pull-right">手机:</label></td>
 
-                    <td><input id="mobile" name="mobile" class="form-control" type="text" value="" maxlength="100" /></td>
+                    <td for="mobile"><input id="mobile" name="mobile" class="form-control" type="text" value="" maxlength="100" /></td>
 
                     <td class="active"><label class="pull-right">是否允许登录:</label></td>
 
@@ -223,10 +223,10 @@
                   </tr>
 
                   <tr>
-                    <td class="active"><label class="pull-right">备注:</label></td>
+                    <td  class="active"><label class="pull-right">备注:</label></td>
 
                     <td>
-                    <textarea id="remarks" name="remarks" maxlength="200" class="form-control" rows="3">
+                    <textarea for="bz" id="remarks" name="bz" maxlength="200" class="form-control" rows="3">
 					</textarea></td>
 
                     <td class="active"></td>
@@ -331,20 +331,44 @@ $(function ()
             phone : phone,
             id:id,
             type:type
-        }, function (data)
+        },function (data)
         {
-            alert("dsfsd");
-
+            if(data.code == 1){
+            	 $('#myModal').modal('hide');
+            	alert(data.msg);
+            	myTable.draw();
+            }else{
+            	alert(data.msg);
+            }
+         
         }, 'Json');
     }
-    $("#sure_button").on("click", function ()
-    {
+    //提交shuju
+	$.validator.setDefaults({
+	    submitHandler: function() {
+	        $('#myModal').modal('hide');
+	        SubmitFormValue();
+	    }
+	});
 
-        $('#myModal').modal('hide');
-        SubmitFormValue();
-    }
-    );
-
+	  $("#submitform").validate({
+		    rules: {
+		    	RoleName: {
+		        required: true,
+		      },
+		      Css: {
+		        required: true,
+		      },
+		    },
+		    messages: {
+		    	MenuName: {
+		        required: "请输入角色名",
+		      },
+		      Css: {
+		        required: "请输入样式",
+		      },
+		    }
+		});
     //construct the data source object to be used by tree
     var remoteUrl = '{$Think.config.__PUBLIC__}/index/Department/getDeparList';
 
@@ -592,7 +616,7 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                         "orderable" : false,
                         "targets" : 8,
                         "data" : null,
-                        "defaultContent" : "<a href='javascript' class='btn btn-info btn-xs'><i class='fa fa-search-plus'></i> 查看</a><a href='javascript' class='btn btn-success btn-xs'><i class='fa fa-edit'></i> 修改</a><a href='javascript'  class='btn btn-danger btn-xs'><i class='fa fa-trash'></i> 删除</a>"
+                        "defaultContent" : "<a  class='btn btn-info btn-xs'><i class='fa fa-search-plus'></i> 查看</a><a  class='btn btn-success btn-xs'><i class='fa fa-edit'></i> 修改</a><a class='btn btn-danger btn-xs'><i class='fa fa-trash'></i> 删除</a>"
                     },
                     {
                         "targets": [ 7 ],

@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>Login Page - Ace Admin</title>
+		<title>欢迎登录lnbei.com</title>
 
 		<meta name="description" content="User login page" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -24,18 +24,23 @@
 		<link rel="stylesheet" href="{$Think.config.__PUBLIC__}/static/assets/css/ace-rtl.css" />
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="assets/css/ace-ie.css" />
+		  <link rel="stylesheet" href="{$Think.config.__PUBLIC__}/static/assets/css/ace-ie.css" />
 		<![endif]-->
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 		<!--[if lte IE 8]>
-		<script src="components/html5shiv/dist/html5shiv.min.js"></script>
-		<script src="components/respond/dest/respond.min.js"></script>
+		<script src="{$Think.config.__PUBLIC__}/static/components/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="{$Think.config.__PUBLIC__}/static/components/respond/dest/respond.min.js"></script>
 		<![endif]-->
 	</head>
 
 	<body class="login-layout">
+	<style>
+		label.error{
+			color:#ff0000
+		}
+	</style>
 		<div class="main-container">
 			<div class="main-content">
 				<div class="row">
@@ -44,10 +49,10 @@
 							<div class="center">
 								<h1>
 									<i class="ace-icon fa fa-leaf green"></i>
-									<span class="red">Ace</span>
-									<span class="white" id="id-text2">Application</span>
+									<span class="red">PHPCGY</span>
+									<span class="white" id="id-text2">后台管理系统</span>
 								</h1>
-								<h4 class="blue" id="id-company-text">&copy; Company Name</h4>
+								<h4 class="blue" id="id-company-text">&copy;林北软件</h4>
 							</div>
 
 							<div class="space-6"></div>
@@ -58,23 +63,23 @@
 										<div class="widget-main">
 											<h4 class="header blue lighter bigger">
 												<i class="ace-icon fa fa-coffee green"></i>
-												Please Enter Your Information
+												请输入账号
 											</h4>
 
 											<div class="space-6"></div>
 
-											<form>
+											<form id="loginForm">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input id="login_name" type="text" class="form-control" placeholder="Username" />
+															<input id="login_name" type="text" class="form-control" name="Username" placeholder="Username" />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input id="password" type="password" class="form-control" placeholder="Password" />
+															<input id="password" type="password" class="form-control" name="Password" placeholder="Password" />
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
@@ -84,12 +89,12 @@
 													<div class="clearfix">
 														<label class="inline">
 															<input id="remember_me" type="checkbox" class="ace" />
-															<span class="lbl"> Remember Me</span>
+															<span class="lbl"> 记住用户名 </span>
 														</label>
 
 														<button onclick="Javascript:CheckFormState();" type="button" class="width-35 pull-right btn btn-sm btn-primary">
 															<i class="ace-icon fa fa-key"></i>
-															<span class="bigger-110">Login</span>
+															<span class="bigger-110">登录</span>
 														</button>
 													</div>
 
@@ -97,38 +102,19 @@
 												</fieldset>
 											</form>
 
-											<div class="social-or-login center">
-												<span class="bigger-110">Or Login Using</span>
-											</div>
-
-											<div class="space-6"></div>
-
-											<div class="social-login center">
-												<a class="btn btn-primary">
-													<i class="ace-icon fa fa-facebook"></i>
-												</a>
-
-												<a class="btn btn-info">
-													<i class="ace-icon fa fa-twitter"></i>
-												</a>
-
-												<a class="btn btn-danger">
-													<i class="ace-icon fa fa-google-plus"></i>
-												</a>
-											</div>
 										</div><!-- /.widget-main -->
 
 										<div class="toolbar clearfix">
 											<div>
 												<a href="#" data-target="#forgot-box" class="forgot-password-link">
 													<i class="ace-icon fa fa-arrow-left"></i>
-													I forgot my password
+													忘记密码
 												</a>
 											</div>
 
 											<div>
 												<a href="#" data-target="#signup-box" class="user-signup-link">
-													I want to register
+													注册
 													<i class="ace-icon fa fa-arrow-right"></i>
 												</a>
 											</div>
@@ -141,27 +127,27 @@
 										<div class="widget-main">
 											<h4 class="header red lighter bigger">
 												<i class="ace-icon fa fa-key"></i>
-												Retrieve Password
+												找回密码
 											</h4>
 
 											<div class="space-6"></div>
 											<p>
-												Enter your email and to receive instructions
+												输入注册时的邮箱
 											</p>
 
-											<form>
+											<form id="retrieveForm">
 												<fieldset>
 													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
+														<span  for="userEmail" class="block input-icon input-icon-right">
+															<input type="email" name="userEmail" class="form-control" placeholder="请输入邮箱" />
 															<i class="ace-icon fa fa-envelope"></i>
 														</span>
 													</label>
 
 													<div class="clearfix">
-														<button type="button" class="width-35 pull-right btn btn-sm btn-danger">
+														<button type="submit" id="retrievesubmit" data-url="{:url('index/index')}" class="width-35 pull-right btn btn-sm btn-danger">
 															<i class="ace-icon fa fa-lightbulb-o"></i>
-															<span class="bigger-110">Send Me!</span>
+															<span class="bigger-110" >获取验证码</span>
 														</button>
 													</div>
 												</fieldset>
@@ -170,7 +156,7 @@
 
 										<div class="toolbar center">
 											<a href="#" data-target="#login-box" class="back-to-login-link">
-												Back to login
+												返回登录
 												<i class="ace-icon fa fa-arrow-right"></i>
 											</a>
 										</div>
@@ -182,47 +168,47 @@
 										<div class="widget-main">
 											<h4 class="header green lighter bigger">
 												<i class="ace-icon fa fa-users blue"></i>
-												New User Registration
+												注册新用户
 											</h4>
 
 											<div class="space-6"></div>
-											<p> Enter your details to begin: </p>
+											<p> 开始输入你的资料: </p>
 
-											<form>
+											<form  id="registerform">
 												<fieldset>
 													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
+														<span form="email" class="block input-icon input-icon-right">
+															<input type="email" name="email" class="form-control" placeholder="Email" />
 															<i class="ace-icon fa fa-envelope"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+														<span for="Username" class="block input-icon input-icon-right">
+															<input type="text" name="Username" class="form-control" placeholder="Username" />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+														<span for="Password" class="block input-icon input-icon-right">
+															<input type="password" class="form-control" name="Password" placeholder="Password" />
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Repeat password" />
+														<span for="rePassword" class="block input-icon input-icon-right">
+															<input type="password" class="form-control" name="rePassword" placeholder="Repeat password" />
 															<i class="ace-icon fa fa-retweet"></i>
 														</span>
 													</label>
 
-													<label class="block">
-														<input type="checkbox" class="ace" />
+													<label for="agree" class="block">
+														<input name="agree" type="checkbox" class="ace" />
 														<span class="lbl">
-															I accept the
-															<a href="#">User Agreement</a>
+															我同意
+															<a href="#">《用户协议》</a>
 														</span>
 													</label>
 
@@ -231,11 +217,11 @@
 													<div class="clearfix">
 														<button type="reset" class="width-30 pull-left btn btn-sm">
 															<i class="ace-icon fa fa-refresh"></i>
-															<span class="bigger-110">Reset</span>
+															<span class="bigger-110">重置</span>
 														</button>
 
-														<button type="button" class="width-65 pull-right btn btn-sm btn-success">
-															<span class="bigger-110">Register</span>
+														<button type="submit" id="registersubmit" class="width-65 pull-right btn btn-sm btn-success">
+															<span class="bigger-110">注册</span>
 
 															<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
 														</button>
@@ -247,7 +233,7 @@
 										<div class="toolbar center">
 											<a href="#" data-target="#login-box" class="back-to-login-link">
 												<i class="ace-icon fa fa-arrow-left"></i>
-												Back to login
+												返回登录
 											</a>
 										</div>
 									</div><!-- /.widget-body -->
@@ -280,9 +266,12 @@
 		<script src="{$Think.config.__PUBLIC__}/static/components/jquery/dist/jquery.js"></script>
 
 		<!-- <![endif]-->
+
 		<script src="{$Think.config.__PUBLIC__}/js/cookie.js"></script>
 		<script src="{$Think.config.__PUBLIC__}/js/form.js"></script>
 		<script src="{$Think.config.__PUBLIC__}/js/jquery_js.js"></script>
+		<script type="text/javascript" src="{$Think.config.__PUBLIC__}/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="{$Think.config.__PUBLIC__}/js/messages_zh.min.js"></script>
 		<!--[if IE]>
 <script src="components/jquery.1x/dist/jquery.js"></script>
 <![endif]-->
@@ -300,9 +289,7 @@
 				$(target).addClass('visible');//show target
 			 });
 			});
-			
-			
-			
+
 			//you don't need this, just used for changing background
 			jQuery(function($) {
 			 $('#btn-login-dark').on('click', function(e) {
@@ -432,6 +419,118 @@
 					}
 				});
 			};
+		(function($){
+			var input = {};
+			var url=null;
+			$("#registersubmit").on("click",function(){
+				$("#registerform").find("input").each(function(){
+					eval("input."+$(this).attr("name")+"='"+$(this).val()+"';");
+				});
+				input.id=$(this).attr("data-id");
+				url = $(this).attr("data-url");
+				input.userSex=$(":checked").val();
+			});
+			$("#retrievesubmit").on("click",function(){
+				$("#retrieveForm").find("input").each(function(){
+					eval("input."+$(this).attr("name")+"='"+$(this).val()+"';");
+				});
+				url = $(this).attr("data-url");
+			});
+
+	
+				// 在键盘按下并释放及提交后验证提交表单
+				  $("#registerform").validate({
+					    rules: {
+					     trueName: "required",
+					     userName: {
+					        required: true,
+					        minlength: 2
+					      },
+					      userEmail: {
+					        required: true,
+					        email: true
+					      },
+					      userPhone:{
+					    	  required: true, 
+					    		rangelength:[11,12]
+					      },
+					      brithday:{
+					    	  required: true, 
+					    	  date:true
+					      },
+					      loginName:{
+					    	  required: true, 
+					    		rangelength:[5,10]
+					      },
+					      userQQ:{
+					    	  number:true,
+					    	  rangelength:[5,13]
+					      },
+					      agree: "required"
+					    },
+					    messages: {
+					    	trueName: "请输入您的名字",
+					    	loginName: {
+					        required: "请输入用户名",
+					        minlength: "用户名必需由两个字母组成"
+					      },
+					      userEmail: "请输入一个正确的邮箱",
+					      userPhone: "请输入一个正确手机号",
+					      brithday: "请输入你的生日",
+					      userName: "请输入你的昵称",
+					      userQQ: "请输入qq"
+					      
+					    },
+					    submitHandler: function() {
+					    	if(url == null) return false;
+					    	$.post(url,input,function(data){
+					    		if(data.code == 1){
+					    			window.location="{:url('index')}";
+					    		}else{
+					    			alert(data.msg);
+					    		}
+					    		
+					    	},"json");
+					    	return false;
+					    }
+					});
+				
+				  $("#retrieveForm").validate({
+					    rules: {
+					      userEmail: {
+					        required: true,
+					        email: true
+					      },
+					    },
+					    messages: {
+					      userEmail: "请输入一个正确的邮箱",
+					    },
+					    submitHandler: function() {
+					    	if(url == null) return false;
+					    	$.post(url,input,function(data){
+					    		if(data.code == 1){
+					    			window.location="{:url('index')}";
+					    		}else{
+					    			alert(data.msg);
+					    		}
+					    		
+					    	},"json");
+					    	return false;
+					    }
+					});
+				  $("#loginForm").validate({
+					    rules: {
+					      userEmail: {
+					        required: true,
+					        email: true
+					      },
+					    },
+					    messages: {
+					      userEmail: "请输入一个正确的邮箱",
+					    },
+					});
+			
+		})(window.jQuery)
 		</script>
         
 	</body>

@@ -144,62 +144,7 @@
 
 $(function ()
 {
-	$.validator.setDefaults({
-	    submitHandler: function() {
-	        //$('#myModal').modal('hide');
-	        var id = $("#submitbutton").attr("data-id");
-	      	var IsDelete = $("#IsDelete").is(":checked");
-	      	var type = $("#submitbutton").attr("data-type");
-	      	if(IsDelete == true){
-	      		IsDelete = 1;
-	      	}else{
-	      		IsDelete = 0;
-	      	}
-	      	var oper = null;
-	      	if(type ==3 ){
-	      		oper = "edit";
-	      	}else {
-	      		oper = "add";
-	      	}
-	        $.post('http://lnbei.com/index.php/index/Role/setRole',
-	        {
-	        	RoleName : $('#RoleName').val(),
-	        	css : $('#css').val(),
-	        	IsDelete : IsDelete,
-	            id:id,
-	            oper:oper
-	        }, function (data)
-	        {
-	            if(data.code == 1){
-	            	 $('#myModal').modal('hide');
-	            	alert(data.msg);
-	            }else{
-	            	alert(data.msg);
-	            }
-	         
-	        }, 'Json');
-	
-	    }
-	});
 
-	  $("#submitform").validate({
-		    rules: {
-		    	RoleName: {
-		        required: true,
-		      },
-		      Css: {
-		        required: true,
-		      },
-		    },
-		    messages: {
-		    	MenuName: {
-		        required: "请输入角色名",
-		      },
-		      Css: {
-		        required: "请输入样式",
-		      },
-		    }
-		});
 
 
     //construct the data source object to be used by tree
@@ -245,16 +190,6 @@ $(function ()
         }
     }
 
-    $('#myModal2').on('show.bs.modal', function (event){
-        var button = $(event.relatedTarget) // Button that triggered the modal
-            var recipient = button.data('whatever') // Extract info from data-* attributes
-            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-            var modal = $(this)
-            //modal.find('.modal-title').text('New message to ' + recipient)
-            modal.find('.modal-footer .btn.btn-primary').attr('data-id', recipient);
-    }
-    )
     $('#usertreeview').ace_tree(
     {
         dataSource : remoteDateSource,
@@ -591,7 +526,63 @@ $('.page-content-area').ace_ajax('loadScripts', scripts, function ()
                 }
             }
         });
+    	$.validator.setDefaults({
+    	    submitHandler: function() {
+    	        //$('#myModal').modal('hide');
+    	        var id = $("#submitbutton").attr("data-id");
+    	      	var IsDelete = $("#IsDelete").is(":checked");
+    	      	var type = $("#submitbutton").attr("data-type");
+    	      	if(IsDelete == true){
+    	      		IsDelete = 1;
+    	      	}else{
+    	      		IsDelete = 0;
+    	      	}
+    	      	var oper = null;
+    	      	if(type ==3 ){
+    	      		oper = "edit";
+    	      	}else {
+    	      		oper = "add";
+    	      	}
+    	        $.post('http://lnbei.com/index.php/index/Role/setRole',
+    	        {
+    	        	RoleName : $('#RoleName').val(),
+    	        	css : $('#css').val(),
+    	        	IsDelete : IsDelete,
+    	            id:id,
+    	            oper:oper
+    	        }, function (data)
+    	        {
+    	            if(data.code == 1){
+    	            	 $('#myModal').modal('hide');
+    	            	alert(data.msg);
+    	            	myTable.draw();
+    	            }else{
+    	            	alert(data.msg);
+    	            }
+    	         
+    	        }, 'Json');
+    	
+    	    }
+    	});
 
+    	  $("#submitform").validate({
+    		    rules: {
+    		    	RoleName: {
+    		        required: true,
+    		      },
+    		      Css: {
+    		        required: true,
+    		      },
+    		    },
+    		    messages: {
+    		    	MenuName: {
+    		        required: "请输入角色名",
+    		      },
+    		      Css: {
+    		        required: "请输入样式",
+    		      },
+    		    }
+    		});
 
         $('#dynamic-table tbody').on('click', 'td .btn.btn-success.btn-xs', function ()
         {

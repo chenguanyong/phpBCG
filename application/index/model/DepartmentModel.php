@@ -21,6 +21,27 @@ class DepartmentModel extends Model
         }
         return $Department;
     }
+    //获取部门列表
+    public function getDepart($where,$page,$rownum){
+        $count = $this->where($where)->count('ID');
+        $back_result = array();
+        $i = 0;
+        $result = $this->where($where)->page($page,$rownum)->select();
+
+        foreach ($result as $result_row){
+             
+            $back_result[$i]['ID'] = $result_row['ID'];
+            $back_result[$i]['OrganizationName'] = $result_row['OrganizationName'];
+            $back_result[$i]['IsDelete'] = $result_row['IsDelete'];
+            $back_result[$i]['DatetimeCreated'] = $result_row['DateTimeCreated'];
+            $back_result[$i]['DatetimeUpdated'] = $result_row['DateTimeUpdated'];
+            $back_result[$i]['ShortName'] = $result_row['ShortName'];
+            $back_result[$i]['Pid'] = $result_row['ParentID'];
+            $i++;
+        }
+        return ['data'=> $back_result,'length' => $count];
+    
+    }
     //保存部门
     public function saveDepart($depart){
         
@@ -101,8 +122,15 @@ class DepartmentModel extends Model
         }
         return $result_array;
     }
-    public function getDepartByParentID($id){
-      return  $result = $this->where("ParentID",$id)->select();
+    public function getDepartByParentID($where){
+      return  $result = $this->where($where)->select();
+    }
+    //获取部门列表
+    public function getDepartList($data){
+    
+        $result = $this->where($data)->order("ID DESC")->select();
+    
+        return $result;
     }
 }
 
